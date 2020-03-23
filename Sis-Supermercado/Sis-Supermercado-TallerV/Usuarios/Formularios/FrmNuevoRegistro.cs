@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Sis_Supermercado_TallerV.RegistroUsers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -89,5 +91,39 @@ namespace Usuarios.Formularios
                 txtcontraseña.Text = "CONTRASEÑA";
             }
         }
+
+        public void RegistrarClientes()
+        {
+            string sql;
+            //MySqlCommand comando;
+            sql = "insert into db_usuarios (Nombre,Usuario,password,FechaNac,Sexo,Accesos) values (@Nombre,@Usuario,@password,@FechaNac,@Sexo,@Accesos)";
+            MySqlCommand comando;
+            try
+            {
+                modulo.AbrirConexion();
+                comando = new MySqlCommand(sql, modulo.conexion);
+
+
+                comando.Parameters.AddWithValue("@Nombre", txtnombre.Text.ToString());
+                comando.Parameters.AddWithValue("@Usuario", txtusuario.Text.ToString());
+                string PassEncriptada;
+                PassEncriptada = Encriptar.EncryptData(txtcontraseña.Text, txtusuario.Text);
+                comando.Parameters.AddWithValue("@password", PassEncriptada.ToString());
+                comando.Parameters.AddWithValue("@FechaNac", dtpFechaNac.Value.Date);
+                comando.Parameters.AddWithValue("@Sexo", cobSexo.SelectedItem.ToString());
+                comando.Parameters.AddWithValue("@Accesos", cboAccesos.SelectedItem.ToString());
+                comando.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            RegistrarClientes();
+        }
+
     }
 }

@@ -133,5 +133,10 @@ namespace MenuPrincipal
         {
             AbrirFormulario<FrmUsuarios>();
         }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

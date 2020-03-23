@@ -71,6 +71,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encriptar.cs" />
     <Compile Include="Formularios\FrmNuevoRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +84,7 @@
     <Compile Include="Formularios\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="modulo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\FrmNuevoRegistro.resx">
@@ -165,6 +167,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\panelSuperiorEnShowDialog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MensajesPersonalizados\MensajesPersonalizados.csproj">
+      <Project>{69d3f89c-9228-41ea-a159-92729348265e}</Project>
+      <Name>MensajesPersonalizados</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

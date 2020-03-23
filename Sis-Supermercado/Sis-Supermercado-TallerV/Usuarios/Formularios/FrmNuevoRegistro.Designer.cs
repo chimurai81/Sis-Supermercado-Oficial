@@ -45,7 +45,6 @@
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,10 +57,10 @@
             this.cboAccesos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(66)))), ((int)(((byte)(75)))));
             this.cboAccesos.FormattingEnabled = true;
             this.cboAccesos.Items.AddRange(new object[] {
-            "ADMIN",
+            "ADMINTRADOR",
             "VENDEDOR",
             "CAJERO"});
-            this.cboAccesos.Location = new System.Drawing.Point(117, 602);
+            this.cboAccesos.Location = new System.Drawing.Point(117, 598);
             this.cboAccesos.Name = "cboAccesos";
             this.cboAccesos.Size = new System.Drawing.Size(316, 39);
             this.cboAccesos.TabIndex = 53;
@@ -97,6 +96,7 @@
             this.dtpFechaNac.ShowCheckBox = true;
             this.dtpFechaNac.Size = new System.Drawing.Size(316, 34);
             this.dtpFechaNac.TabIndex = 47;
+            this.dtpFechaNac.Value = new System.DateTime(2020, 3, 20, 0, 0, 0, 0);
             // 
             // txtcontraseña
             // 
@@ -183,6 +183,7 @@
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegistrar.Textcolor = System.Drawing.Color.White;
             this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // BtnCancelar
             // 
@@ -301,7 +302,7 @@
             this.bunifuSeparator1.ForeColor = System.Drawing.Color.Black;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(66)))), ((int)(((byte)(75)))));
             this.bunifuSeparator1.LineThickness = 3;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(87, 212);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(86, 225);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(360, 43);
@@ -318,14 +319,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(532, 800);
-            this.panel1.TabIndex = 56;
             // 
             // bunifuFormFadeTransition1
             // 
@@ -353,7 +346,6 @@
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNuevoRegistro";
             this.ShowInTaskbar = false;
@@ -384,7 +376,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
         private Bunifu.Framework.UI.BunifuFlatButton BtnCancelar;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuFormFadeTransition bunifuFormFadeTransition1;
     }
 }

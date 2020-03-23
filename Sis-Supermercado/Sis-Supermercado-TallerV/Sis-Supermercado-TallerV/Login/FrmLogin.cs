@@ -104,29 +104,59 @@ namespace Sis_Supermercado_TallerV
         {
             string sql;
             string passEncrip;
-            passEncrip = Encriptar.EncryptData(txtusuario.Text, txtpass.Text);
+            passEncrip = Encriptar.EncryptData(txtpass.Text, txtusuario.Text);
             //MySqlCommand comando;
             sql = "select * from db_usuarios where usuario = '"+txtusuario.Text+"' and password = '"+ passEncrip+"'" + condicion;
             MySqlCommand comando;
+            MySqlDataAdapter consulta = new MySqlDataAdapter();
+            DataSet resultado = new DataSet();
             try
             {
                 modulo.AbrirConexion();
-                comando = new MySqlCommand(sql, modulo.conexion);
-             
-                MySqlDataReader leer = comando.ExecuteReader();
 
-                if (leer.Read())
+                consulta = new MySqlDataAdapter(sql, modulo.conexion);
+                consulta.Fill(resultado, "rsProveedor");
+                string TipoDeAcceso;
+                
+      
+                comando = new MySqlCommand(sql, modulo.conexion);
+                MySqlDataReader leer = comando.ExecuteReader();
+                if (leer.HasRows)
                 {
-                    FrmMenuPrincipal menu = new FrmMenuPrincipal();
-                    menu.Show();
-                    this.Hide();
+                    while (leer.Read())
+                    {
+                        TipoDeAcceso = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Accesos"]);
+                        if (TipoDeAcceso == "ADMINISTRADOR")
+                        {
+                            FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                            menu.Show();
+                            this.Hide();
+                        }
+                        else if (TipoDeAcceso == "VENDEDOR")
+                        {
+                            FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                            menu.Show();
+                            menu.bunifuFlatButton2.Enabled = false;
+                            this.Hide();
+                        }
+                        else if (TipoDeAcceso == "CAJERO")
+                        {
+                            FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                            menu.Show();
+                            menu.bunifuFlatButton2.Enabled = false;
+                            menu.bunifuFlatButton5.Enabled = false;
+                            this.Hide();
+                        }
+
+                    }
                 }
+               
                 else
                 {
                     MensajeDeError show = new MensajeDeError();
                     show.ShowDialog();
                 }
-
+                modulo.CerraConexion();
             }
             catch (MySqlException ex)
             {

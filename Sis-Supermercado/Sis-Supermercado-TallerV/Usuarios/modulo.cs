@@ -13,7 +13,7 @@ namespace Sis_Supermercado_TallerV.RegistroUsers
     {
         public static MySqlConnection conexion;
         public static string ErrorDB;
-        
+
         public static void AbrirConexion()
         {
             try
@@ -24,12 +24,12 @@ namespace Sis_Supermercado_TallerV.RegistroUsers
                                               "Uid=root;" +
                                               "Pwd=;";
                 conexion.Open();
-                
+
             }
             catch (MySqlException ex)
             {
                 MensajeDeError frmError = new MensajeDeError();
-                
+
                 frmError.labelerrro.Text = "MYSQL ERROR";
 
                 frmError.ShowDialog();

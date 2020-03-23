@@ -161,8 +161,8 @@
         private System.Windows.Forms.Timer timer1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private System.Windows.Forms.Label labelerrro;
         private System.Windows.Forms.Timer timer2;
+        public System.Windows.Forms.Label labelerrro;
     }
 }
 
