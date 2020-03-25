@@ -72,6 +72,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FrmEditarRegistroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEditarRegistroClientes.Designer.cs">
+      <DependentUpon>FrmEditarRegistroClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmNuevoRegistroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\FrmEditarRegistroClientes.resx">
+      <DependentUpon>FrmEditarRegistroClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmNuevoRegistroCliente.resx">
       <DependentUpon>FrmNuevoRegistroCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\panelSuperiorEnShowDialog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panelSuperiorEnShowDialogModificar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

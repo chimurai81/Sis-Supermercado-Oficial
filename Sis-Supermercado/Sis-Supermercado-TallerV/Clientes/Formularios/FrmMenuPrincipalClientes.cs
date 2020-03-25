@@ -69,5 +69,13 @@ namespace Clientes
             this.Close();
         }
 
+        
+        
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            FrmEditarRegistroClientes form = new FrmEditarRegistroClientes();
+            form.ShowDialog();
+            GetAll("");
+        }
     }
 }
