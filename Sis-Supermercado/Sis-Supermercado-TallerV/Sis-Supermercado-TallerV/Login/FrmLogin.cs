@@ -100,6 +100,7 @@ namespace Sis_Supermercado_TallerV
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        
         public void InicioDeSesion_db_usuarios(string condicion)
         {
             string sql;

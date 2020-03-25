@@ -124,8 +124,14 @@
   <data name="paraelSliderIzquierdo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paraelSliderIzquierdo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="paraelSliderIzquierdo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paraelSliderIzquierdo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="letrasLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\letrasLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,8 +142,14 @@
   <data name="menu (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="INFOTEACHPERFILYOUTUBE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INFOTEACHPERFILYOUTUBE.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="usersGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usersGris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="perfil infoteach" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perfil infoteach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FondoLogin2ConLetras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondoLogin2ConLetras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,8 +169,11 @@
   <data name="ImagenLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImagenLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menuoficial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuoficial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FondoLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INFOTEACHPERFILYOUTUBE1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INFOTEACHPERFILYOUTUBE1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IcoClientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoClientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,14 +187,14 @@
   <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IcoVentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoVentas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IcoDevolucion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoDevolucion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FondoLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FondoLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IcoCotizaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoCotizaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +202,11 @@
   <data name="loginminimalista2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loginminimalista2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="passcolorgris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\passcolorgris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menuoficial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menuoficial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="market" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\market.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +229,7 @@
   <data name="menuoficial2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menuoficial2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="passcolorgris" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\passcolorgris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo para uso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo para uso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E67584BB-6695-41BA-B4D5-4C598B6A320A}</ProjectGuid>
+    <ProjectGuid>{7E066FF1-2031-4B4B-A6C2-7C23DE13EB2E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MenuPrincipal</RootNamespace>
-    <AssemblyName>MenuPrincipal</AssemblyName>
+    <RootNamespace>Clientes</RootNamespace>
+    <AssemblyName>Clientes</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,8 +36,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\..\Desktop\3 AÑO ING. INFORMATICA\Sistema Taller V\Materiales Inferfaz\bunifu\Bunifu_UI_v1.52.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
@@ -71,16 +72,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmMenuPrincipal.cs">
+    <Compile Include="Formularios\FrmNuevoRegistroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMenuPrincipal.Designer.cs">
-      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    <Compile Include="Formularios\FrmNuevoRegistroCliente.Designer.cs">
+      <DependentUpon>FrmNuevoRegistroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmMenuPrincipalClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmMenuPrincipalClientes.Designer.cs">
+      <DependentUpon>FrmMenuPrincipalClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmMenuPrincipal.resx">
-      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmNuevoRegistroCliente.resx">
+      <DependentUpon>FrmNuevoRegistroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMenuPrincipalClientes.resx">
+      <DependentUpon>FrmMenuPrincipalClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,131 +117,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\expand.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FondoLogin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FondoLogin2ConLetras.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FondoLogin3ConLetras.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IcoCaja.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IcoClientes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IcoCotizaciones.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IcoDevolucion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IcoPoductos.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icoreportes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IcoSlide.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IcoUsers.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IcoVentas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ImagenLogin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\letrasLogin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\market.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menuoficial.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menuoficial2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minimize %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minimize.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\paraelSliderIzquierdo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\password.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\paraelSliderIzquierdo2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cerrarColorGris.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginminimalista2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minimizarColorGris.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\usersGris.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\passcolorgris.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Clientes\Clientes.csproj">
-      <Project>{7e066ff1-2031-4b4b-a6c2-7c23de13eb2e}</Project>
-      <Name>Clientes</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Usuarios\Usuarios.csproj">
       <Project>{5AF63239-BE7B-4318-9311-8E5D93936004}</Project>
       <Name>Usuarios</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <None Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home.png" />
+    <None Include="Resources\news.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home1.png" />
+    <None Include="Resources\minus.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\INFOTEACHPERFILYOUTUBE.jpg" />
+    <None Include="Resources\close %282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\perfil infoteach.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\INFOTEACHPERFILYOUTUBE1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo para uso.png" />
+    <None Include="Resources\panelSuperiorEnShowDialog.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
