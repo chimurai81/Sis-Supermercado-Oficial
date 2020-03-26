@@ -62,6 +62,7 @@
             this.txtId.TabIndex = 109;
             this.txtId.Text = "idConBoton";
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // txtDireccion
             // 

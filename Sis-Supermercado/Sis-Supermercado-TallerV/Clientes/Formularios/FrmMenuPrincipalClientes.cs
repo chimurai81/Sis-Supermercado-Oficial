@@ -48,11 +48,12 @@ namespace Clientes
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void FrmRegistroCliente_Load(object sender, EventArgs e)
         {
 
             GetAll("");
-
+            comboBox1.SelectedIndex = 0;
         }
 
         //INSERTAR NUEVO CLIENTE
@@ -69,13 +70,13 @@ namespace Clientes
             this.Close();
         }
 
-        
-        
+
+        FrmEditarConBoton frm2;
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            FrmEditarConBoton form = new FrmEditarConBoton();
-            form.ShowDialog();
-            GetAll("");
+            frm2 = new FrmEditarConBoton();
+            AddOwnedForm(frm2);
+            frm2.ShowDialog();
         }
 
         /// <inicio>
@@ -88,13 +89,11 @@ namespace Clientes
         }
         /// </fin pasar dato>
         /// 
-        FrmEditarConBoton frm2;
+ 
         public static string valor;
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             valor = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            frm2 = new FrmEditarConBoton();
-            AddOwnedForm(frm2);
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
@@ -117,6 +116,39 @@ namespace Clientes
             {
                 
             }
+        }
+
+        private void bunifuMaterialTextbox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string condicion;
+            condicion = "";
+
+            if (comboBox1.SelectedItem.ToString() == "NOMBRE")
+            {
+                condicion = " where Nombre like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
+            }
+
+            if (comboBox1.SelectedItem.ToString() == "APELLIDO")
+            {
+                condicion = " where Apellido like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
+            }
+
+            if (comboBox1.SelectedItem.ToString() == "CEDULA")
+            {
+                condicion = " where CiNro like '%" + txtBuscar.Text + "%'";
+            }
+ 
+            if (comboBox1.SelectedItem.ToString() == "RUC")
+            {
+                condicion = " where Ruc like '%" + txtBuscar.Text + "%'";
+            }
+
+            if (comboBox1.SelectedItem.ToString() == "TELEFONO")
+            {
+                condicion = " where NroTelef like '%" + txtBuscar.Text + "%'";
+            }
+
+            GetAll(condicion);
         }
     }
 }

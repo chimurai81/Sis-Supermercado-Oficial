@@ -94,6 +94,7 @@ namespace Clientes.Formularios
             EditarClientes(id);
             FrmMenuPrincipalParaClientes frm = (FrmMenuPrincipalParaClientes)Owner;
             frm.GetAll("");
+            this.Close();
         }
 
 

@@ -79,10 +79,14 @@ namespace Clientes.Formularios
             }
         }
 
+        
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             string id = txtId.Text;
             EditarClientes(id);
+            FrmMenuPrincipalParaClientes frm3 = (FrmMenuPrincipalParaClientes)Owner;
+            frm3.GetAll("");
+            this.Close();
         }
 
         private void FrmEditarConBoton_Load(object sender, EventArgs e)
@@ -95,6 +99,11 @@ namespace Clientes.Formularios
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
