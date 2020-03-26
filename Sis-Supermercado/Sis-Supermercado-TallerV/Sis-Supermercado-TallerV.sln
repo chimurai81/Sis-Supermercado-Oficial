@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usuarios", "Usuarios\Usuari
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MensajesPersonalizados", "MensajesPersonalizados\MensajesPersonalizados.csproj", "{69D3F89C-9228-41EA-A159-92729348265E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clientes", "Clientes\Clientes.csproj", "{7E066FF1-2031-4B4B-A6C2-7C23DE13EB2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{69D3F89C-9228-41EA-A159-92729348265E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69D3F89C-9228-41EA-A159-92729348265E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69D3F89C-9228-41EA-A159-92729348265E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E066FF1-2031-4B4B-A6C2-7C23DE13EB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E066FF1-2031-4B4B-A6C2-7C23DE13EB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E066FF1-2031-4B4B-A6C2-7C23DE13EB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E066FF1-2031-4B4B-A6C2-7C23DE13EB2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -102,7 +102,7 @@ namespace Usuarios.Formularios
             {
                 modulo.AbrirConexion();
                 comando = new MySqlCommand(sql, modulo.conexion);
-
+ 
 
                 comando.Parameters.AddWithValue("@Nombre", txtnombre.Text.ToString());
                 comando.Parameters.AddWithValue("@Usuario", txtusuario.Text.ToString());

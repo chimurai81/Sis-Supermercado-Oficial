@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Usuarios.Formularios;
+using Clientes;
 
 namespace MenuPrincipal
 {
@@ -17,7 +18,11 @@ namespace MenuPrincipal
         public FrmMenuPrincipal()
         {
             InitializeComponent();
-            
+            //para evitar parpadeos en el formulario, y redimencionar el formulario.
+            this.Text = string.Empty; //cadena de string vacia
+            this.ControlBox = false; // desabiliamos la caja contenedora
+            this.DoubleBuffered = true; //activamos el doble buffer para evitar parpadeos en el form.
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; // para que se vea la barra inferior de windows
         }
 
         // inicio
@@ -25,7 +30,7 @@ namespace MenuPrincipal
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         //fin
 
 
@@ -58,13 +63,13 @@ namespace MenuPrincipal
 
         private void SidebarWrapper_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+           
         }
 
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
             bunifuFormFadeTransition1.ShowAsyc(this);
+            
         }
 
         private void SidebarWrapper_Paint(object sender, PaintEventArgs e)
@@ -116,6 +121,8 @@ namespace MenuPrincipal
         private void ptbRestore_Click_2(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
+            ptbmaxi.Visible = true;
+            ptbRestore.Visible = false;
         }
 
         private void ptbClose_Click(object sender, EventArgs e)
@@ -125,8 +132,7 @@ namespace MenuPrincipal
 
         private void PanelContenedor_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -137,6 +143,23 @@ namespace MenuPrincipal
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString("hh:mm:ss");
+            label2.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmMenuPrincipalParaClientes>();
         }
     }
 }

@@ -123,6 +123,26 @@ namespace MenuPrincipal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home {
+            get {
+                object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home1 {
+            get {
+                object obj = ResourceManager.GetObject("home1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IcoCaja {
             get {
                 object obj = ResourceManager.GetObject("IcoCaja", resourceCulture);
@@ -223,6 +243,26 @@ namespace MenuPrincipal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap INFOTEACHPERFILYOUTUBE {
+            get {
+                object obj = ResourceManager.GetObject("INFOTEACHPERFILYOUTUBE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap INFOTEACHPERFILYOUTUBE1 {
+            get {
+                object obj = ResourceManager.GetObject("INFOTEACHPERFILYOUTUBE1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap letrasLogin {
             get {
                 object obj = ResourceManager.GetObject("letrasLogin", resourceCulture);
@@ -236,6 +276,16 @@ namespace MenuPrincipal.Properties {
         internal static System.Drawing.Bitmap loginminimalista2 {
             get {
                 object obj = ResourceManager.GetObject("loginminimalista2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_para_uso {
+            get {
+                object obj = ResourceManager.GetObject("logo para uso", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +406,16 @@ namespace MenuPrincipal.Properties {
         internal static System.Drawing.Bitmap password {
             get {
                 object obj = ResourceManager.GetObject("password", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap perfil_infoteach {
+            get {
+                object obj = ResourceManager.GetObject("perfil infoteach", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
