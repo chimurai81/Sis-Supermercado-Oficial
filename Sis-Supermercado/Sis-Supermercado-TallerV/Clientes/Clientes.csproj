@@ -72,6 +72,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FrmEditarConBoton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEditarConBoton.Designer.cs">
+      <DependentUpon>FrmEditarConBoton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmEditarRegistroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\FrmEditarConBoton.resx">
+      <DependentUpon>FrmEditarConBoton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmEditarRegistroClientes.resx">
       <DependentUpon>FrmEditarRegistroClientes.cs</DependentUpon>
     </EmbeddedResource>

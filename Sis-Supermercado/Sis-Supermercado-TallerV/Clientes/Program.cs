@@ -16,7 +16,7 @@ namespace Clientes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmRegistroCliente());
+            Application.Run(new FrmMenuPrincipalParaClientes());
         }
     }
 }

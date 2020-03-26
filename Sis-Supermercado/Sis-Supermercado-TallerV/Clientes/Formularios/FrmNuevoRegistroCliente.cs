@@ -157,7 +157,7 @@ namespace Clientes.Formularios
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             InsertarClientes();
-            FrmRegistroCliente frm = new FrmRegistroCliente();
+            FrmMenuPrincipalParaClientes frm = new FrmMenuPrincipalParaClientes();
             frm.GetAll("");
         }
 

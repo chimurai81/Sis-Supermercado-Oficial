@@ -12,20 +12,12 @@ using System.Windows.Forms;
 
 namespace Clientes.Formularios
 {
-    public partial class FrmEditarRegistroClientes : Form
+    public partial class FrmEditarConBoton : Form
     {
-        public FrmEditarRegistroClientes()
+        public FrmEditarConBoton()
         {
             InitializeComponent();
-            
         }
-
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        //para editar
         public void EditarClientes(string id)
         {
             string sql;
@@ -53,7 +45,6 @@ namespace Clientes.Formularios
                 MessageBox.Show(ex.Message);
             }
         }
-        //estirar en formulario los datos de la DB por un Id de parametro.
         public void cargarRegistro(string id)
         {
 
@@ -92,38 +83,18 @@ namespace Clientes.Formularios
         {
             string id = txtId.Text;
             EditarClientes(id);
-            FrmMenuPrincipalParaClientes frm = (FrmMenuPrincipalParaClientes)Owner;
-            frm.GetAll("");
         }
 
-
-        private void FrmEditarRegistroClientes_Load(object sender, EventArgs e)
+        private void FrmEditarConBoton_Load(object sender, EventArgs e)
         {
-                FrmMenuPrincipalParaClientes frm = (FrmMenuPrincipalParaClientes)Owner;
-                txtId.Text = Convert.ToString(frm.dataGridView1.CurrentRow.Cells[0].Value);
-                txtnombre.Text = Convert.ToString(frm.dataGridView1.CurrentRow.Cells[1].Value);
-                txtApellido.Text = Convert.ToString(frm.dataGridView1.CurrentRow.Cells[2].Value);
-                txtCiNro.Text = Convert.ToString(frm.dataGridView1.CurrentRow.Cells[3].Value);
-                txtRuc.Text = Convert.ToString(frm.dataGridView1.CurrentRow.Cells[4].Value);
-                txtNroTel.Text = Convert.ToString(frm.dataGridView1.CurrentRow.Cells[5].Value);
-                dtpFechaNac.Value = Convert.ToDateTime(frm.dataGridView1.CurrentRow.Cells[6].Value);
-                txtDireccion.Text = Convert.ToString(frm.dataGridView1.CurrentRow.Cells[7].Value);
-
+            string valordeid = FrmMenuPrincipalParaClientes.valor;
+            cargarRegistro(valordeid);
+            txtDireccion.Font = new Font("Arial", txtDireccion.Font.Size * 0.6f);
         }
 
-        private void FrmEditarRegistroClientes_FormClosed(object sender, FormClosedEventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void FrmEditarRegistroClientes_Shown(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtId_DoubleClick(object sender, EventArgs e)
-        {
-           
+            this.Close();
         }
     }
 }

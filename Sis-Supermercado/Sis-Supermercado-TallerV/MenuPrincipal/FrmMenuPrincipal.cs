@@ -159,7 +159,7 @@ namespace MenuPrincipal
 
         private void bunifuFlatButton7_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmRegistroCliente>();
+            AbrirFormulario<FrmMenuPrincipalParaClientes>();
         }
     }
 }

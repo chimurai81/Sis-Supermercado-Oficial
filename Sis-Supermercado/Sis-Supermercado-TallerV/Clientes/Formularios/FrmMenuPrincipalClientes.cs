@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace Clientes
 {
-    public partial class FrmRegistroCliente : Form
+    public partial class FrmMenuPrincipalParaClientes : Form
     {
 
-        public FrmRegistroCliente()
+        public FrmMenuPrincipalParaClientes()
         {
             InitializeComponent();
         }
@@ -73,9 +73,50 @@ namespace Clientes
         
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            FrmEditarRegistroClientes form = new FrmEditarRegistroClientes();
+            FrmEditarConBoton form = new FrmEditarConBoton();
             form.ShowDialog();
             GetAll("");
+        }
+
+        /// <inicio>
+        FrmEditarRegistroClientes frm;
+        public void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            frm = new FrmEditarRegistroClientes();
+            AddOwnedForm(frm);
+            frm.ShowDialog();
+        }
+        /// </fin pasar dato>
+        /// 
+        FrmEditarConBoton frm2;
+        public static string valor;
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            valor = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frm2 = new FrmEditarConBoton();
+            AddOwnedForm(frm2);
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            MySqlCommand comando;
+            string sql;
+            string codigo;
+            codigo = Convert.ToString(dataGridView1[0, dataGridView1.CurrentRow.Index].Value);
+            try
+            {
+                modulo.AbrirConexion();
+                sql = "delete from db_clientes where id_Clientes=@id_Clientes";
+                comando = new MySqlCommand(sql, modulo.conexion);
+                comando.Parameters.AddWithValue("@id_Clientes", codigo);
+                comando.ExecuteNonQuery();
+                GetAll("");
+
+            }
+            catch (MySqlException ex)
+            {
+                
+            }
         }
     }
 }
