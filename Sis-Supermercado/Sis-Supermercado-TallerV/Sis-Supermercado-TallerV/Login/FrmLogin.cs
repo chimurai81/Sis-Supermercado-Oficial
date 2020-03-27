@@ -164,17 +164,14 @@ namespace Sis_Supermercado_TallerV
                 MessageBox.Show(ex.Message);
             }
         }
+        
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            FrmMenuPrincipal frm = new FrmMenuPrincipal();
+            frm.lblUsuarioActivo.Text = txtusuario.Text;
             InicioDeSesion_db_usuarios("");
-
         }
 
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
-        {
-            FrmRegistroUsuarios menu = new FrmRegistroUsuarios();
-            menu.Show();
-            this.Hide();
-        }
+
     }
 }

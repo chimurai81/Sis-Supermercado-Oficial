@@ -224,6 +224,10 @@
       <Project>{e67584bb-6695-41ba-b4d5-4c598b6a320a}</Project>
       <Name>MenuPrincipal</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Usuarios\Usuarios.csproj">
+      <Project>{5af63239-be7b-4318-9311-8e5d93936004}</Project>
+      <Name>Usuarios</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\id-card.png" />

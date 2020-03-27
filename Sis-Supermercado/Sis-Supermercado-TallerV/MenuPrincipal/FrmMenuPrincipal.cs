@@ -69,7 +69,7 @@ namespace MenuPrincipal
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
             bunifuFormFadeTransition1.ShowAsyc(this);
-            
+           
         }
 
         private void SidebarWrapper_Paint(object sender, PaintEventArgs e)
