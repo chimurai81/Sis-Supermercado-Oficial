@@ -293,6 +293,16 @@ namespace Sis_Supermercado_TallerV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_para_uso {
+            get {
+                object obj = ResourceManager.GetObject("logo para uso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap market {
             get {
                 object obj = ResourceManager.GetObject("market", resourceCulture);
@@ -376,6 +386,16 @@ namespace Sis_Supermercado_TallerV.Properties {
         internal static System.Drawing.Bitmap paraelSliderIzquierdo {
             get {
                 object obj = ResourceManager.GetObject("paraelSliderIzquierdo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paraelSliderIzquierdo2 {
+            get {
+                object obj = ResourceManager.GetObject("paraelSliderIzquierdo2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

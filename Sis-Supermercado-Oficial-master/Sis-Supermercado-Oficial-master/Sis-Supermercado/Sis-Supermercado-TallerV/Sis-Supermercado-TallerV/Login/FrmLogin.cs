@@ -88,6 +88,11 @@ namespace Sis_Supermercado_TallerV
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        internal string valor()
+        {
+            throw new NotImplementedException();
+        }
+
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
             ReleaseCapture();
@@ -100,7 +105,7 @@ namespace Sis_Supermercado_TallerV
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        
+      
         public void InicioDeSesion_db_usuarios(string condicion)
         {
             string sql;
@@ -108,6 +113,8 @@ namespace Sis_Supermercado_TallerV
             passEncrip = Encriptar.EncryptData(txtpass.Text, txtusuario.Text);
             //MySqlCommand comando;
             sql = "select * from db_usuarios where usuario = '"+txtusuario.Text+"' and password = '"+ passEncrip+"'" + condicion;
+           
+            
             MySqlCommand comando;
             MySqlDataAdapter consulta = new MySqlDataAdapter();
             DataSet resultado = new DataSet();
@@ -129,20 +136,24 @@ namespace Sis_Supermercado_TallerV
                         TipoDeAcceso = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Accesos"]);
                         if (TipoDeAcceso == "ADMINISTRADOR")
                         {
-                            FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                       
+                            FrmMenuPrincipal2 menu = new FrmMenuPrincipal2(txtusuario.Text.ToUpperInvariant());
                             menu.Show();
                             this.Hide();
                         }
                         else if (TipoDeAcceso == "VENDEDOR")
                         {
-                            FrmMenuPrincipal menu = new FrmMenuPrincipal();
+
+                            FrmMenuPrincipal2 menu = new FrmMenuPrincipal2(txtusuario.Text.ToUpperInvariant());
                             menu.Show();
                             menu.bunifuFlatButton2.Enabled = false;
+                            
                             this.Hide();
                         }
                         else if (TipoDeAcceso == "CAJERO")
                         {
-                            FrmMenuPrincipal menu = new FrmMenuPrincipal();
+
+                            FrmMenuPrincipal2 menu = new FrmMenuPrincipal2(txtusuario.Text.ToUpperInvariant());
                             menu.Show();
                             menu.bunifuFlatButton2.Enabled = false;
                             menu.bunifuFlatButton5.Enabled = false;
@@ -167,8 +178,6 @@ namespace Sis_Supermercado_TallerV
         
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            FrmMenuPrincipal frm = new FrmMenuPrincipal();
-            frm.lblUsuarioActivo.Text = txtusuario.Text;
             InicioDeSesion_db_usuarios("");
         }
 

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5AF63239-BE7B-4318-9311-8E5D93936004}</ProjectGuid>
+    <ProjectGuid>{7E066FF1-2031-4B4B-A6C2-7C23DE13EB2E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Usuarios</RootNamespace>
-    <AssemblyName>Usuarios</AssemblyName>
+    <RootNamespace>Clientes</RootNamespace>
+    <AssemblyName>Clientes</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,8 +36,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Sis-Supermercado-TallerV\Sis-Supermercado-TallerV\Sis-Supermercado-TallerV\Bunifu_UI_v1.52.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\3 AÑO ING. INFORMATICA\Sistema Taller V\Materiales Inferfaz\bunifu\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
@@ -71,27 +72,43 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Encriptar.cs" />
-    <Compile Include="Formularios\FrmNuevoRegistro.cs">
+    <Compile Include="Formularios\FrmEditarConBoton.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmNuevoRegistro.Designer.cs">
-      <DependentUpon>FrmNuevoRegistro.cs</DependentUpon>
+    <Compile Include="Formularios\FrmEditarConBoton.Designer.cs">
+      <DependentUpon>FrmEditarConBoton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmUsuarios.cs">
+    <Compile Include="Formularios\FrmEditarRegistroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmUsuarios.Designer.cs">
-      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    <Compile Include="Formularios\FrmEditarRegistroClientes.Designer.cs">
+      <DependentUpon>FrmEditarRegistroClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="modulo.cs" />
+    <Compile Include="Formularios\FrmNuevoRegistroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmNuevoRegistroCliente.Designer.cs">
+      <DependentUpon>FrmNuevoRegistroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmMenuPrincipalClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmMenuPrincipalClientes.Designer.cs">
+      <DependentUpon>FrmMenuPrincipalClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\FrmNuevoRegistro.resx">
-      <DependentUpon>FrmNuevoRegistro.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmEditarConBoton.resx">
+      <DependentUpon>FrmEditarConBoton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmUsuarios.resx">
-      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmEditarRegistroClientes.resx">
+      <DependentUpon>FrmEditarRegistroClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmNuevoRegistroCliente.resx">
+      <DependentUpon>FrmNuevoRegistroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmMenuPrincipalClientes.resx">
+      <DependentUpon>FrmMenuPrincipalClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,61 +135,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\calendar.png" />
+    <ProjectReference Include="..\Usuarios\Usuarios.csproj">
+      <Project>{5AF63239-BE7B-4318-9311-8E5D93936004}</Project>
+      <Name>Usuarios</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\close.png" />
+    <None Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\market.png" />
+    <None Include="Resources\news.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\btnaggusuario.png" />
+    <None Include="Resources\minus.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\clipboard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\more %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\btnaggusuarioOficial.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\btnaggusuarioOficial1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\btnregistrousuarios.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\btnconfigurarusuarios.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\btnaggusuarioOficial2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\paraelSliderIzquierdo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\registroUsuariosPanelSuperior.png" />
+    <None Include="Resources\close %282%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\panelSuperiorEnShowDialog.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MensajesPersonalizados\MensajesPersonalizados.csproj">
-      <Project>{69d3f89c-9228-41ea-a159-92729348265e}</Project>
-      <Name>MensajesPersonalizados</Name>
-    </ProjectReference>
+    <None Include="Resources\panelSuperiorEnShowDialogModificar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -106,6 +106,7 @@
             // bunifuElipse2
             // 
             this.bunifuElipse2.ElipseRadius = 5;
+            this.bunifuElipse2.TargetControl = this;
             // 
             // bunifuTransition1
             // 
@@ -343,6 +344,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.TextBox txtusuario;
+        public System.Windows.Forms.TextBox txtusuario;
     }
 }
