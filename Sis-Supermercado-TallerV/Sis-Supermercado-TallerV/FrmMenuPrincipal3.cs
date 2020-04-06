@@ -24,9 +24,38 @@ namespace MenuPrincipal
             this.ControlBox = false; // desabiliamos la caja contenedora
             this.DoubleBuffered = true; //activamos el doble buffer para evitar parpadeos en el form.
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; // para que se vea la barra inferior de windows
-
             lblUsuarioActivo.Text = text;
+            CustomizeDesing();
         }
+        //para el sub menu
+        private void CustomizeDesing()
+        {
+              panelSubMenuProductos.Visible = false;
+            //panelSubMenuCaja.Visible = false;
+            //panelSubMenuReportes.Visible = false;
+        }
+        
+        private void hideSubMenu()
+        {
+            if (panelSubMenuProductos.Visible == true)
+                panelSubMenuProductos.Visible = false;
+            //if (panelSubMenuCaja.Visible == true)
+            //    panelSubMenuCaja.Visible = false;
+            //if (panelSubMenuReportes.Visible == true)
+            //    panelSubMenuReportes.Visible = false;
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+        //finsubmenu
 
         // inicio
         //esto funciona para poder mover a todos los lados el formulario
@@ -55,30 +84,12 @@ namespace MenuPrincipal
 
 
 
-        private void ptbRestore_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            ptbRestore.Visible = false;
-            ptbmaxi.Visible = true;
-        }
-
-
-
-        private void SidebarWrapper_MouseDown(object sender, MouseEventArgs e)
-        {
-           
-        }
-
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
             bunifuFormFadeTransition1.ShowAsyc(this);
             
         }
 
-        private void SidebarWrapper_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
@@ -99,15 +110,7 @@ namespace MenuPrincipal
                 formulario.BringToFront();
             }
         }
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void ptbSideBar_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void PtbMinimizar_Click_1(object sender, EventArgs e)
         {
@@ -133,20 +136,6 @@ namespace MenuPrincipal
             Application.Exit();
         }
 
-        private void PanelContenedor_MouseDown(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<FrmMenuUsuarios>();
-        }
-
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
@@ -160,14 +149,57 @@ namespace MenuPrincipal
             label2.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        private void btnVentas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmMenuPrincipalParaClientes>();
+            hideSubMenu();//siempre al final de todo
         }
 
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        private void btnProductos_Click(object sender, EventArgs e)
         {
+            showSubMenu(panelSubMenuProductos);
+        }
 
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            
+            hideSubMenu();//siempre al final de todo
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();//siempre al final de todo
+        }
+
+        private void btnDevolucion_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();//siempre al final de todo
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmMenuPrincipalParaClientes>();
+            hideSubMenu();//siempre al final de todo
+        }
+
+        private void BtnCaja_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();//siempre al final de todo
+        }
+
+        private void btnCotizaciones_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();//siempre al final de todo
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();//siempre al final de todo
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmMenuUsuarios>();
+            hideSubMenu();//siempre al final de todo
         }
     }
 }

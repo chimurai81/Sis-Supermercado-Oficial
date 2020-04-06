@@ -146,7 +146,7 @@ namespace Sis_Supermercado_TallerV
 
                             FrmMenuPrincipal3 menu = new FrmMenuPrincipal3(txtusuario.Text.ToUpperInvariant());
                             menu.Show();
-                            menu.bunifuFlatButton2.Enabled = false;
+                            menu.btnUsuarios.Enabled = false;
                             
                             this.Hide();
                         }
@@ -155,8 +155,8 @@ namespace Sis_Supermercado_TallerV
 
                             FrmMenuPrincipal3 menu = new FrmMenuPrincipal3(txtusuario.Text.ToUpperInvariant());
                             menu.Show();
-                            menu.bunifuFlatButton2.Enabled = false;
-                            menu.bunifuFlatButton5.Enabled = false;
+                            menu.btnUsuarios.Enabled = false;
+                            menu.btnReportes.Enabled = false;
                             this.Hide();
                         }
 
