@@ -224,6 +224,10 @@
       <Project>{69d3f89c-9228-41ea-a159-92729348265e}</Project>
       <Name>MensajesPersonalizados</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Prod_Provee_Marc_Categ\Prod_Provee_Marc_Categ.csproj">
+      <Project>{bd07f6ca-134d-4b84-897d-7c141fc73953}</Project>
+      <Name>Prod_Provee_Marc_Categ</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Usuarios\Usuarios.csproj">
       <Project>{5af63239-be7b-4318-9311-8e5d93936004}</Project>
       <Name>Usuarios</Name>
@@ -252,6 +256,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo para uso1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INFOTEACHPERFILYOUTUBE2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

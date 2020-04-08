@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using Usuarios.Formularios;
 using Clientes;
 using Sis_Supermercado_TallerV;
+using Prod_Provee_Marc_Categ.Formularios;
 
 namespace MenuPrincipal
 {
@@ -50,7 +51,8 @@ namespace MenuPrincipal
             if (subMenu.Visible == false)
             {
                 hideSubMenu();
-                subMenu.Visible = true;
+                transicionPanelBtnProductos.Show(subMenu);
+                //subMenu.Visible = true;
             }
             else
                 subMenu.Visible = false;
@@ -161,12 +163,13 @@ namespace MenuPrincipal
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormulario<FrmMenuProductos>();
             hideSubMenu();//siempre al final de todo
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<FrmMenuProveedores>();
             hideSubMenu();//siempre al final de todo
         }
 
