@@ -17,7 +17,7 @@ namespace Sis_Supermercado_TallerV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmMenuPrincipal3(""));
         }
     }
 }
