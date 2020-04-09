@@ -204,5 +204,10 @@ namespace MenuPrincipal
             AbrirFormulario<FrmMenuUsuarios>();
             hideSubMenu();//siempre al final de todo
         }
+
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

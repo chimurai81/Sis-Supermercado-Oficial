@@ -260,5 +260,26 @@
   <ItemGroup>
     <None Include="Resources\INFOTEACHPERFILYOUTUBE2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicioReporteIniciaP1l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REPORTEINICIAL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REPORTEINICIAL2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REPORTEINICIAL3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REPORTEINICIAL4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REPORTEINICIAL5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REPORTEINICIAL6.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

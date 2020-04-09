@@ -72,35 +72,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\FrmAgregarNuevoProveedor.cs">
+    <Compile Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmAgregarNuevoProveedor.Designer.cs">
+    <Compile Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.Designer.cs">
       <DependentUpon>FrmAgregarNuevoProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmMenuProductos.cs">
+    <Compile Include="Formularios De Productos\FrmMenuProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmMenuProductos.Designer.cs">
+    <Compile Include="Formularios De Productos\FrmMenuProductos.Designer.cs">
       <DependentUpon>FrmMenuProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmMenuProveedores.cs">
+    <Compile Include="Formularios De Proveedores\FrmMenuProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmMenuProveedores.Designer.cs">
+    <Compile Include="Formularios De Proveedores\FrmMenuProveedores.Designer.cs">
       <DependentUpon>FrmMenuProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmModificarConBoton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmModificarConBoton.Designer.cs">
+      <DependentUpon>FrmModificarConBoton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmModificarSinBoton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmModificarSinBoton.Designer.cs">
+      <DependentUpon>FrmModificarSinBoton.cs</DependentUpon>
     </Compile>
     <Compile Include="modulo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\FrmAgregarNuevoProveedor.resx">
+    <EmbeddedResource Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.resx">
       <DependentUpon>FrmAgregarNuevoProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmMenuProductos.resx">
+    <EmbeddedResource Include="Formularios De Productos\FrmMenuProductos.resx">
       <DependentUpon>FrmMenuProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmMenuProveedores.resx">
+    <EmbeddedResource Include="Formularios De Proveedores\FrmMenuProveedores.resx">
       <DependentUpon>FrmMenuProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Proveedores\FrmModificarConBoton.resx">
+      <DependentUpon>FrmModificarConBoton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Proveedores\FrmModificarSinBoton.resx">
+      <DependentUpon>FrmModificarSinBoton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,6 +152,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoaggProveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoaggProveedores1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoaggProveedores2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a68832c79725180370fa5e147b19b8c5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif-icons-menu-transition-animations-animated-3-dotted.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %28white%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close white 250x250px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close white 25x25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\779b9dc3928c2dbc304bcf6702bef6df.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\news.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MODIFICAR PROVEEDOR.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -40,7 +40,7 @@ namespace Clientes
                 modulo.AbrirConexion();
                 consulta = new MySqlDataAdapter(sql, modulo.conexion);
                 resultado = new DataSet();
-                consulta.Fill(resultado, "rsresultado");
+                consulta.Fill(resultado, "rsresultado"); 
                 dataGridView1.DataSource = resultado.Tables["rsresultado"];
             }
             catch (MySqlException ex)
