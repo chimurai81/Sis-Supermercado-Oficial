@@ -117,6 +117,7 @@
             this.comboBox1.Size = new System.Drawing.Size(283, 33);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.Text = "              BUSCAR POR:";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox1
             // 

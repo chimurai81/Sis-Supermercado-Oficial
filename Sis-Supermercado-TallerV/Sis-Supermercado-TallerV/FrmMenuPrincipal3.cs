@@ -153,55 +153,66 @@ namespace MenuPrincipal
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
+            lblTitulodeFormulario.Text = "VENTAS";
             hideSubMenu();//siempre al final de todo
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
+            lblTitulodeFormulario.Text = "INICIO";
             showSubMenu(panelSubMenuProductos);
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmMenuProductos>();
+            lblTitulodeFormulario.Text = "PRODUCTOS";
             hideSubMenu();//siempre al final de todo
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+
             AbrirFormulario<FrmMenuProveedores>();
+            lblTitulodeFormulario.Text = "PROVEEDORES";
             hideSubMenu();//siempre al final de todo
         }
 
         private void btnDevolucion_Click(object sender, EventArgs e)
         {
+            lblTitulodeFormulario.Text = "DEVOLUCION";
             hideSubMenu();//siempre al final de todo
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmMenuPrincipalParaClientes>();
+            lblTitulodeFormulario.Text = "CLIENTES";
             hideSubMenu();//siempre al final de todo
         }
 
         private void BtnCaja_Click(object sender, EventArgs e)
         {
+            lblTitulodeFormulario.Text = "CAJA";
             hideSubMenu();//siempre al final de todo
         }
 
         private void btnCotizaciones_Click(object sender, EventArgs e)
         {
+            lblTitulodeFormulario.Text = "COTIZACION";
             hideSubMenu();//siempre al final de todo
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
+            lblTitulodeFormulario.Text = "REPORTES";
             hideSubMenu();//siempre al final de todo
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmMenuUsuarios>();
+            lblTitulodeFormulario.Text = "USUARIOS";
             hideSubMenu();//siempre al final de todo
         }
 

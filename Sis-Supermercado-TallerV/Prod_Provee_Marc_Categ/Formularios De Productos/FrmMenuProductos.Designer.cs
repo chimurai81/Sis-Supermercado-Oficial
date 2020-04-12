@@ -61,21 +61,22 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.SeaGreen;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 220);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1469, 661);
+            this.dataGridView1.Size = new System.Drawing.Size(1461, 583);
             this.dataGridView1.TabIndex = 1;
             // 
-            // FrmProductos
+            // FrmMenuProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1475, 806);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FrmProductos";
+            this.DoubleBuffered = true;
+            this.Name = "FrmMenuProductos";
             this.Text = "FrmProductos";
             this.Load += new System.EventHandler(this.FrmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

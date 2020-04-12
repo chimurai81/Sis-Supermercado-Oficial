@@ -43,6 +43,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
         private void FrmProveedores_Load(object sender, EventArgs e)
         {
             GetAll("");
+            comboBox1.SelectedIndex = 0;
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -101,6 +102,30 @@ namespace Prod_Provee_Marc_Categ.Formularios
             }
             MensajesPersonalizados.MensajeDeCheck frm = new MensajesPersonalizados.MensajeDeCheck();
             frm.ShowDialog();
+        }
+
+        private void txtBuscar_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string condicion;
+            condicion = "";
+
+            if (comboBox1.SelectedItem.ToString() == "PROVEEDOR")
+            {
+                condicion = " where Nombre like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
+            }
+
+
+            if (comboBox1.SelectedItem.ToString() == "RUC")
+            {
+                condicion = " where Ruc like '%" + txtBuscar.Text + "%'";
+            }
+
+            GetAll(condicion);
         }
     }
 }
