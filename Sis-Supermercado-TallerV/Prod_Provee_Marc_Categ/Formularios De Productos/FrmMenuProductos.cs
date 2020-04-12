@@ -31,7 +31,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
                 consulta = new MySqlDataAdapter(sql, modulo.conexion);
                 resultado = new DataSet();
                 consulta.Fill(resultado, "rsresultado");
-                dataGridView1.DataSource = resultado.Tables["rsresultado"];
+                DataGridView1.DataSource = resultado.Tables["rsresultado"];
             }
             catch (MySqlException ex)
             {
