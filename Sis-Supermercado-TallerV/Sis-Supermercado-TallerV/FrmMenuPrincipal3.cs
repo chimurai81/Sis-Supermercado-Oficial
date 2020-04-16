@@ -220,5 +220,10 @@ namespace MenuPrincipal
         {
 
         }
+
+        private void ptbSideBar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

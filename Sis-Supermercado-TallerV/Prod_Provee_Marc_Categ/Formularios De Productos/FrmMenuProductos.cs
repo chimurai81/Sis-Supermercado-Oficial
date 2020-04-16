@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Prod_Provee_Marc_Categ.Formularios_De_Productos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,121 @@ namespace Prod_Provee_Marc_Categ.Formularios
         }
         private void FrmProductos_Load(object sender, EventArgs e)
         {
+            //panelsuperior.Height = 30;
+            //pictureBox2.Visible = true;
             GetAll("");
+        }
+
+  
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblNuevoProducto_MouseEnter(object sender, EventArgs e)
+        {
+            lblNuevoProducto.ForeColor = Color.LightCyan;
+            lblNuevoProducto.Font = new Font("Century Gothic", 16, FontStyle.Regular, GraphicsUnit.Pixel);
+        }
+
+        private void lblNuevoProducto_MouseLeave(object sender, EventArgs e)
+        {
+            
+            lblNuevoProducto.ForeColor = Color.White;
+            lblNuevoProducto.Font = new Font("Century Gothic", 14, FontStyle.Bold, GraphicsUnit.Pixel);
+        }
+
+        private void lblModificarProducto_MouseEnter(object sender, EventArgs e)
+        {
+            lblModificarProducto.ForeColor = Color.LightCyan;
+            lblModificarProducto.Font = new Font("Century Gothic", 16, FontStyle.Regular, GraphicsUnit.Pixel);
+        }
+
+        private void lblModificarProducto_MouseLeave(object sender, EventArgs e)
+        {
+            lblModificarProducto.ForeColor = Color.White;
+            lblModificarProducto.Font = new Font("Century Gothic", 14, FontStyle.Bold, GraphicsUnit.Pixel);
+        }
+
+        private void lblEliminarProducto_MouseEnter(object sender, EventArgs e)
+        {
+            lblEliminarProducto.ForeColor = Color.LightCyan;
+            lblEliminarProducto.Font = new Font("Century Gothic", 16, FontStyle.Regular, GraphicsUnit.Pixel);
+        }
+
+        private void lblEliminarProducto_MouseLeave(object sender, EventArgs e)
+        {
+            lblEliminarProducto.ForeColor = Color.White;
+            lblEliminarProducto.Font = new Font("Century Gothic", 14, FontStyle.Bold, GraphicsUnit.Pixel);
+        }
+
+        private void bunifuCustomLabel1_MouseEnter(object sender, EventArgs e)
+        {
+            lblMarcas.ForeColor = Color.LightCyan;
+            lblMarcas.Font = new Font("Century Gothic", 16, FontStyle.Regular, GraphicsUnit.Pixel);
+        }
+
+        private void bunifuCustomLabel1_MouseLeave(object sender, EventArgs e)
+        {
+            lblMarcas.ForeColor = Color.White;
+            lblMarcas.Font = new Font("Century Gothic", 14, FontStyle.Bold, GraphicsUnit.Pixel);
+        }
+
+        private void lblcategorias_MouseEnter(object sender, EventArgs e)
+        {
+            lblcategorias.ForeColor = Color.LightCyan;
+            lblcategorias.Font = new Font("Century Gothic", 16, FontStyle.Regular, GraphicsUnit.Pixel);
+        }
+
+        private void lblcategorias_MouseLeave(object sender, EventArgs e)
+        {
+            lblcategorias.ForeColor = Color.White;
+            lblcategorias.Font = new Font("Century Gothic", 14, FontStyle.Bold, GraphicsUnit.Pixel);
+        }
+
+        private void txtBuscar_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "Buscar")
+            {
+                txtBuscar.Text = "";
+            }
+        }
+
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+                txtBuscar.Text = "Buscar";
+            }
+        }
+
+        private void lblNuevoProducto_Click(object sender, EventArgs e)
+        {
+            FrmNuevoProducto frm = new FrmNuevoProducto();
+            frm.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

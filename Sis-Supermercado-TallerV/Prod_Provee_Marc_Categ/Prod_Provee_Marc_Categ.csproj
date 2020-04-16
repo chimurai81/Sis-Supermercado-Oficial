@@ -43,6 +43,8 @@
     <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -55,6 +57,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Transactions" />
@@ -72,6 +75,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios De Productos\FrmNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmNuevoProducto.Designer.cs">
+      <DependentUpon>FrmNuevoProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +114,9 @@
     <Compile Include="modulo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios De Productos\FrmNuevoProducto.resx">
+      <DependentUpon>FrmNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.resx">
       <DependentUpon>FrmAgregarNuevoProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +203,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MODIFICAR PROVEEDOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-abajo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prueba1grupu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif-flecha-abajo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngocean.com %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngocean.com %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barritaPequeParteSuperiorMenuProducto1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoAggProducto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoAggProducto1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoAggProducto2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoAggProducto3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

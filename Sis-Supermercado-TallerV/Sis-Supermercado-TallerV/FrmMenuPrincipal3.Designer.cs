@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation22 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal3));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation24 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation23 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.lblstockminimo = new System.Windows.Forms.Label();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.lblTitulodeFormulario = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ptbSideBar = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ptbmaxi = new System.Windows.Forms.PictureBox();
@@ -84,8 +86,6 @@
             this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.transicionPanelBtnProductos = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.lblTitulodeFormulario = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblstockminimo = new System.Windows.Forms.Label();
             this.PanelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -118,22 +118,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
             this.bunifuTransition1.Cursor = null;
-            animation22.AnimateOnlyDifferences = true;
-            animation22.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation22.BlindCoeff")));
-            animation22.LeafCoeff = 1F;
-            animation22.MaxTime = 1F;
-            animation22.MinTime = 0F;
-            animation22.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation22.MosaicCoeff")));
-            animation22.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation22.MosaicShift")));
-            animation22.MosaicSize = 0;
-            animation22.Padding = new System.Windows.Forms.Padding(0);
-            animation22.RotateCoeff = 0F;
-            animation22.RotateLimit = 0F;
-            animation22.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation22.ScaleCoeff")));
-            animation22.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation22.SlideCoeff")));
-            animation22.TimeCoeff = 0F;
-            animation22.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation22;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 1F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
             // 
             // PanelContenedor
             // 
@@ -159,23 +159,37 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1130, 900);
             this.PanelContenedor.TabIndex = 8;
             // 
+            // lblstockminimo
+            // 
+            this.lblstockminimo.AutoSize = true;
+            this.transicionPanelBtnProductos.SetDecoration(this.lblstockminimo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblstockminimo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.lblstockminimo, BunifuAnimatorNS.DecorationType.None);
+            this.lblstockminimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstockminimo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(85)))));
+            this.lblstockminimo.Location = new System.Drawing.Point(33, 384);
+            this.lblstockminimo.Name = "lblstockminimo";
+            this.lblstockminimo.Size = new System.Drawing.Size(141, 25);
+            this.lblstockminimo.TabIndex = 13;
+            this.lblstockminimo.Text = "Stock Mínimo: ";
+            // 
             // bunifuCustomDataGrid1
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuCustomDataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.transicionPanelBtnProductos.SetDecoration(this.bunifuCustomDataGrid1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.bunifuCustomDataGrid1, BunifuAnimatorNS.DecorationType.None);
@@ -334,6 +348,22 @@
             this.panelTitleBar.TabIndex = 0;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
+            // lblTitulodeFormulario
+            // 
+            this.lblTitulodeFormulario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitulodeFormulario.AutoSize = true;
+            this.lblTitulodeFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(85)))));
+            this.transicionPanelBtnProductos.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
+            this.lblTitulodeFormulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulodeFormulario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTitulodeFormulario.Location = new System.Drawing.Point(575, 36);
+            this.lblTitulodeFormulario.Name = "lblTitulodeFormulario";
+            this.lblTitulodeFormulario.Size = new System.Drawing.Size(57, 25);
+            this.lblTitulodeFormulario.TabIndex = 35;
+            this.lblTitulodeFormulario.Text = "Inicio";
+            // 
             // ptbSideBar
             // 
             this.ptbSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(85)))));
@@ -341,12 +371,13 @@
             this.bunifuTransition2.SetDecoration(this.ptbSideBar, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.ptbSideBar, BunifuAnimatorNS.DecorationType.None);
             this.ptbSideBar.Image = global::Sis_Supermercado_TallerV.Properties.Resources.menuoficial2;
-            this.ptbSideBar.Location = new System.Drawing.Point(12, 28);
+            this.ptbSideBar.Location = new System.Drawing.Point(6, 28);
             this.ptbSideBar.Name = "ptbSideBar";
             this.ptbSideBar.Size = new System.Drawing.Size(35, 35);
             this.ptbSideBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbSideBar.TabIndex = 10;
             this.ptbSideBar.TabStop = false;
+            this.ptbSideBar.Click += new System.EventHandler(this.ptbSideBar_Click);
             this.ptbSideBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ptbSideBar_MouseDown);
             // 
             // bunifuFlatButton4
@@ -1046,22 +1077,22 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
             this.bunifuTransition2.Cursor = null;
-            animation24.AnimateOnlyDifferences = true;
-            animation24.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation24.BlindCoeff")));
-            animation24.LeafCoeff = 0F;
-            animation24.MaxTime = 1F;
-            animation24.MinTime = 0F;
-            animation24.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation24.MosaicCoeff")));
-            animation24.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation24.MosaicShift")));
-            animation24.MosaicSize = 0;
-            animation24.Padding = new System.Windows.Forms.Padding(50);
-            animation24.RotateCoeff = 0.3F;
-            animation24.RotateLimit = 0.2F;
-            animation24.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation24.ScaleCoeff")));
-            animation24.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation24.SlideCoeff")));
-            animation24.TimeCoeff = 0F;
-            animation24.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation24;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(50);
+            animation3.RotateCoeff = 0.3F;
+            animation3.RotateLimit = 0.2F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation3;
             this.bunifuTransition2.Interval = 5;
             this.bunifuTransition2.MaxAnimationTime = 1000;
             // 
@@ -1089,52 +1120,22 @@
             // 
             this.transicionPanelBtnProductos.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.transicionPanelBtnProductos.Cursor = null;
-            animation23.AnimateOnlyDifferences = true;
-            animation23.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation23.BlindCoeff")));
-            animation23.LeafCoeff = 0F;
-            animation23.MaxTime = 1F;
-            animation23.MinTime = 0F;
-            animation23.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation23.MosaicCoeff")));
-            animation23.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation23.MosaicShift")));
-            animation23.MosaicSize = 0;
-            animation23.Padding = new System.Windows.Forms.Padding(0);
-            animation23.RotateCoeff = 0F;
-            animation23.RotateLimit = 0F;
-            animation23.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation23.ScaleCoeff")));
-            animation23.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation23.SlideCoeff")));
-            animation23.TimeCoeff = 0F;
-            animation23.TransparencyCoeff = 1F;
-            this.transicionPanelBtnProductos.DefaultAnimation = animation23;
-            // 
-            // lblTitulodeFormulario
-            // 
-            this.lblTitulodeFormulario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTitulodeFormulario.AutoSize = true;
-            this.lblTitulodeFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(85)))));
-            this.transicionPanelBtnProductos.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
-            this.lblTitulodeFormulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulodeFormulario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitulodeFormulario.Location = new System.Drawing.Point(575, 36);
-            this.lblTitulodeFormulario.Name = "lblTitulodeFormulario";
-            this.lblTitulodeFormulario.Size = new System.Drawing.Size(57, 25);
-            this.lblTitulodeFormulario.TabIndex = 35;
-            this.lblTitulodeFormulario.Text = "Inicio";
-            // 
-            // lblstockminimo
-            // 
-            this.lblstockminimo.AutoSize = true;
-            this.transicionPanelBtnProductos.SetDecoration(this.lblstockminimo, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lblstockminimo, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.lblstockminimo, BunifuAnimatorNS.DecorationType.None);
-            this.lblstockminimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblstockminimo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(85)))));
-            this.lblstockminimo.Location = new System.Drawing.Point(33, 384);
-            this.lblstockminimo.Name = "lblstockminimo";
-            this.lblstockminimo.Size = new System.Drawing.Size(141, 25);
-            this.lblstockminimo.TabIndex = 13;
-            this.lblstockminimo.Text = "Stock Mínimo: ";
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.transicionPanelBtnProductos.DefaultAnimation = animation2;
             // 
             // FrmMenuPrincipal3
             // 

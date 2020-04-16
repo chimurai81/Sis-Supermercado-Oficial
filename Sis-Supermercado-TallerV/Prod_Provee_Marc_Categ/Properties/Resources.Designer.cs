@@ -83,6 +83,96 @@ namespace Prod_Provee_Marc_Categ.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barrasuperiorProductos {
+            get {
+                object obj = ResourceManager.GetObject("barrasuperiorProductos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barrasuperiorProductos1 {
+            get {
+                object obj = ResourceManager.GetObject("barrasuperiorProductos1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barrasuperiorProductos2 {
+            get {
+                object obj = ResourceManager.GetObject("barrasuperiorProductos2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barrasuperiorProductos21 {
+            get {
+                object obj = ResourceManager.GetObject("barrasuperiorProductos21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barrasuperiorProductos3 {
+            get {
+                object obj = ResourceManager.GetObject("barrasuperiorProductos3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barrasuperiorProductos4 {
+            get {
+                object obj = ResourceManager.GetObject("barrasuperiorProductos4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barrasuperiorProductos5 {
+            get {
+                object obj = ResourceManager.GetObject("barrasuperiorProductos5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barritaPequeParteSuperiorMenuProducto {
+            get {
+                object obj = ResourceManager.GetObject("barritaPequeParteSuperiorMenuProducto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barritaPequeParteSuperiorMenuProducto1 {
+            get {
+                object obj = ResourceManager.GetObject("barritaPequeParteSuperiorMenuProducto1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close__2_ {
             get {
                 object obj = ResourceManager.GetObject("close (2)", resourceCulture);
@@ -123,6 +213,56 @@ namespace Prod_Provee_Marc_Categ.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flecha_abajo {
+            get {
+                object obj = ResourceManager.GetObject("flecha-abajo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoAggProducto {
+            get {
+                object obj = ResourceManager.GetObject("FondoAggProducto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoAggProducto1 {
+            get {
+                object obj = ResourceManager.GetObject("FondoAggProducto1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoAggProducto2 {
+            get {
+                object obj = ResourceManager.GetObject("FondoAggProducto2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoAggProducto3 {
+            get {
+                object obj = ResourceManager.GetObject("FondoAggProducto3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondoaggProveedores {
             get {
                 object obj = ResourceManager.GetObject("fondoaggProveedores", resourceCulture);
@@ -153,9 +293,29 @@ namespace Prod_Provee_Marc_Categ.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gif_flecha_abajo {
+            get {
+                object obj = ResourceManager.GetObject("gif-flecha-abajo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gif_icons_menu_transition_animations_animated_3_dotted {
             get {
                 object obj = ResourceManager.GetObject("gif-icons-menu-transition-animations-animated-3-dotted", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giphy {
+            get {
+                object obj = ResourceManager.GetObject("giphy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +356,36 @@ namespace Prod_Provee_Marc_Categ.Properties {
         internal static System.Drawing.Bitmap plus {
             get {
                 object obj = ResourceManager.GetObject("plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngocean_com__2_ {
+            get {
+                object obj = ResourceManager.GetObject("pngocean.com (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngocean_com__3_ {
+            get {
+                object obj = ResourceManager.GetObject("pngocean.com (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prueba1grupu {
+            get {
+                object obj = ResourceManager.GetObject("prueba1grupu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
