@@ -149,7 +149,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
 
         private void lblNuevoProducto_Click(object sender, EventArgs e)
         {
-            FrmNuevoProducto frm = new FrmNuevoProducto();
+            FrmNuevoProductos frm = new FrmNuevoProductos();
             frm.ShowDialog();
         }
 

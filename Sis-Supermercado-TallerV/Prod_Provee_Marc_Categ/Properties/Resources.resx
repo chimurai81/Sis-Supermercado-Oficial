@@ -118,11 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ffechaddevencimientooooo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ffechaddevencimientooooo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fondoaggProveedores" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondoaggProveedores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="a68832c79725180370fa5e147b19b8c51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a68832c79725180370fa5e147b19b8c51.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1253360" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1253360.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="news" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\news.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bar-code-scanner1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bar-code-scanner1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sin título-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sin título-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="barrasuperiorProductos4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barrasuperiorProductos4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,6 +151,9 @@
   <data name="FondoAggProducto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondoAggProducto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="textura-inconsútil-con-los-iconos-estación-44873609" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\textura-inconsútil-con-los-iconos-estación-44873609.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gif-flecha-abajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gif-flecha-abajo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,8 +163,11 @@
   <data name="close (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flecha-abajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flecha-abajo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fechadevencimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fechadevencimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="product" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,11 +181,17 @@
   <data name="barritaPequeParteSuperiorMenuProducto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barritaPequeParteSuperiorMenuProducto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="barritaPequeParteSuperiorMenuProducto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\barritaPequeParteSuperiorMenuProducto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="barcode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barcode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barcode1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barcode1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngocean.com (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngocean.com (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono-proveedor-png-51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-proveedor-png-51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="barrasuperiorProductos2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barrasuperiorProductos2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +199,20 @@
   <data name="prueba1grupu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\prueba1grupu.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fechaddevencimientoOFICIAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fechaddevencimientoOFICIAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash-register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash-register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="close white 25x25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close white 25x25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ffffffff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ffffffff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="category" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\category.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="barrasuperiorProductos21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barrasuperiorProductos21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,11 +220,26 @@
   <data name="barrasuperiorProductos3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barrasuperiorProductos3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ffechaddevencimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ffechaddevencimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barritaPequeParteSuperiorMenuProducto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barritaPequeParteSuperiorMenuProducto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shopping-cart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shopping-cart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fondoaggProveedores1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondoaggProveedores1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bar-code-scanner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bar-code-scanner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondoAggProducto3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoAggProducto3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MODIFICAR PROVEEDOR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MODIFICAR PROVEEDOR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +256,20 @@
   <data name="close white 250x250px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close white 250x250px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="flecha-abajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha-abajo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="barrasuperiorProductos5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barrasuperiorProductos5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="12533601" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\12533601.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="category1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\category1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono-proveedor-png-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-proveedor-png-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="barrasuperiorProductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barrasuperiorProductos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,10 +277,19 @@
   <data name="FondoAggProducto2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondoAggProducto2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fechaddevencimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fechaddevencimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bar-code-scanner2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bar-code-scanner2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FechaNac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FechaNac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="a68832c79725180370fa5e147b19b8c5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a68832c79725180370fa5e147b19b8c5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FondoAggProducto3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FondoAggProducto3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ParteSuperiorMenuProductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ParteSuperiorMenuProductos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -40,16 +40,22 @@
             this.lblstockminimo = new System.Windows.Forms.Label();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.lblTitulodeFormulario = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.bunifuColorTransition1 = new Bunifu.Framework.UI.BunifuColorTransition(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.transicionPanelBtnProductos = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.lblTitulodeFormulario = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ptbSideBar = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ptbmaxi = new System.Windows.Forms.PictureBox();
@@ -80,21 +86,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblUsuarioActivo = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.bunifuColorTransition1 = new Bunifu.Framework.UI.BunifuColorTransition(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.transicionPanelBtnProductos = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.PanelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSideBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbmaxi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbRestore)).BeginInit();
@@ -220,6 +220,136 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Sumario del Sistema: ";
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.transicionPanelBtnProductos.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label2.Location = new System.Drawing.Point(716, 510);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 32);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "FECHA";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.transicionPanelBtnProductos.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
+            this.label1.Location = new System.Drawing.Point(742, 421);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(269, 89);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "HORA";
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(85)))));
+            this.panelTitleBar.Controls.Add(this.lblTitulodeFormulario);
+            this.panelTitleBar.Controls.Add(this.ptbSideBar);
+            this.panelTitleBar.Controls.Add(this.bunifuFlatButton4);
+            this.panelTitleBar.Controls.Add(this.ptbmaxi);
+            this.panelTitleBar.Controls.Add(this.ptbRestore);
+            this.panelTitleBar.Controls.Add(this.ptbClose);
+            this.panelTitleBar.Controls.Add(this.PtbMinimizar);
+            this.bunifuTransition1.SetDecoration(this.panelTitleBar, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.panelTitleBar, BunifuAnimatorNS.DecorationType.None);
+            this.transicionPanelBtnProductos.SetDecoration(this.panelTitleBar, BunifuAnimatorNS.DecorationType.None);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1130, 86);
+            this.panelTitleBar.TabIndex = 0;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // lblTitulodeFormulario
+            // 
+            this.lblTitulodeFormulario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitulodeFormulario.AutoSize = true;
+            this.lblTitulodeFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(85)))));
+            this.transicionPanelBtnProductos.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
+            this.lblTitulodeFormulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulodeFormulario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTitulodeFormulario.Location = new System.Drawing.Point(575, 36);
+            this.lblTitulodeFormulario.Name = "lblTitulodeFormulario";
+            this.lblTitulodeFormulario.Size = new System.Drawing.Size(57, 25);
+            this.lblTitulodeFormulario.TabIndex = 35;
+            this.lblTitulodeFormulario.Text = "Inicio";
+            // 
+            // bunifuTransition2
+            // 
+            this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
+            this.bunifuTransition2.Cursor = null;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(50);
+            animation3.RotateCoeff = 0.3F;
+            animation3.RotateLimit = 0.2F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation3;
+            this.bunifuTransition2.Interval = 5;
+            this.bunifuTransition2.MaxAnimationTime = 1000;
+            // 
+            // bunifuColorTransition1
+            // 
+            this.bunifuColorTransition1.Color1 = System.Drawing.Color.White;
+            this.bunifuColorTransition1.Color2 = System.Drawing.Color.White;
+            this.bunifuColorTransition1.ProgessValue = 0;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuFormFadeTransition1
+            // 
+            this.bunifuFormFadeTransition1.Delay = 1;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // transicionPanelBtnProductos
+            // 
+            this.transicionPanelBtnProductos.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.transicionPanelBtnProductos.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.transicionPanelBtnProductos.DefaultAnimation = animation2;
+            // 
             // pictureBox8
             // 
             this.transicionPanelBtnProductos.SetDecoration(this.pictureBox8, BunifuAnimatorNS.DecorationType.None);
@@ -297,72 +427,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.transicionPanelBtnProductos.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label2.Location = new System.Drawing.Point(716, 510);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 32);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "FECHA";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.transicionPanelBtnProductos.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(63)))), ((int)(((byte)(77)))));
-            this.label1.Location = new System.Drawing.Point(742, 421);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 89);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "HORA";
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(85)))));
-            this.panelTitleBar.Controls.Add(this.lblTitulodeFormulario);
-            this.panelTitleBar.Controls.Add(this.ptbSideBar);
-            this.panelTitleBar.Controls.Add(this.bunifuFlatButton4);
-            this.panelTitleBar.Controls.Add(this.ptbmaxi);
-            this.panelTitleBar.Controls.Add(this.ptbRestore);
-            this.panelTitleBar.Controls.Add(this.ptbClose);
-            this.panelTitleBar.Controls.Add(this.PtbMinimizar);
-            this.bunifuTransition1.SetDecoration(this.panelTitleBar, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.panelTitleBar, BunifuAnimatorNS.DecorationType.None);
-            this.transicionPanelBtnProductos.SetDecoration(this.panelTitleBar, BunifuAnimatorNS.DecorationType.None);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1130, 86);
-            this.panelTitleBar.TabIndex = 0;
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // lblTitulodeFormulario
-            // 
-            this.lblTitulodeFormulario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTitulodeFormulario.AutoSize = true;
-            this.lblTitulodeFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(85)))));
-            this.transicionPanelBtnProductos.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.lblTitulodeFormulario, BunifuAnimatorNS.DecorationType.None);
-            this.lblTitulodeFormulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulodeFormulario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitulodeFormulario.Location = new System.Drawing.Point(575, 36);
-            this.lblTitulodeFormulario.Name = "lblTitulodeFormulario";
-            this.lblTitulodeFormulario.Size = new System.Drawing.Size(57, 25);
-            this.lblTitulodeFormulario.TabIndex = 35;
-            this.lblTitulodeFormulario.Text = "Inicio";
             // 
             // ptbSideBar
             // 
@@ -1073,70 +1137,6 @@
             this.bunifuSeparator1.Transparency = 150;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // bunifuTransition2
-            // 
-            this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
-            this.bunifuTransition2.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(50);
-            animation3.RotateCoeff = 0.3F;
-            animation3.RotateLimit = 0.2F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation3;
-            this.bunifuTransition2.Interval = 5;
-            this.bunifuTransition2.MaxAnimationTime = 1000;
-            // 
-            // bunifuColorTransition1
-            // 
-            this.bunifuColorTransition1.Color1 = System.Drawing.Color.White;
-            this.bunifuColorTransition1.Color2 = System.Drawing.Color.White;
-            this.bunifuColorTransition1.ProgessValue = 0;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuFormFadeTransition1
-            // 
-            this.bunifuFormFadeTransition1.Delay = 1;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // transicionPanelBtnProductos
-            // 
-            this.transicionPanelBtnProductos.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
-            this.transicionPanelBtnProductos.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.transicionPanelBtnProductos.DefaultAnimation = animation2;
-            // 
             // FrmMenuPrincipal3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1158,14 +1158,14 @@
             this.PanelContenedor.ResumeLayout(false);
             this.PanelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSideBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbmaxi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbRestore)).EndInit();
