@@ -296,5 +296,20 @@
   <ItemGroup>
     <None Include="Resources\IcoDevolucion1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-proveedor-png-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1253360.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-proveedor-png-51.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

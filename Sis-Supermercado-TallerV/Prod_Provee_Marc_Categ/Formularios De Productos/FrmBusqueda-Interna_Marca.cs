@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
 {
-    public partial class FrmBusqueda_Interna_Categoria : Form
+    public partial class FrmBusqueda_Interna_Marca : Form
     {
-        public FrmBusqueda_Interna_Categoria()
+        public FrmBusqueda_Interna_Marca()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
             string sql;
             MySqlDataAdapter consulta;
             DataSet resultado;
-            sql = "SELECT * FROM db_categoria " + condicion;
+            sql = "SELECT * FROM db_marca " + condicion;
 
             try
             {
@@ -37,7 +37,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
                 MessageBox.Show(ex.Message);
             }
         }
-        private void FrmBusqueda_Interna_Categoria_Load(object sender, EventArgs e)
+        private void FrmBusqueda_Interna_Marca_Load(object sender, EventArgs e)
         {
             GetAll("");
         }
@@ -50,7 +50,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
             string operacion;
-            operacion = "WHERE  Descripcion LIKE '%" + txtBuscar.Text + "%' OR Estado LIKE '%" + txtBuscar.Text + "%'";
+            operacion = "WHERE Descripcion LIKE '%" + txtBuscar.Text + "%' OR Estado LIKE '%" + txtBuscar.Text + "%'";
             GetAll(operacion);
         }
 

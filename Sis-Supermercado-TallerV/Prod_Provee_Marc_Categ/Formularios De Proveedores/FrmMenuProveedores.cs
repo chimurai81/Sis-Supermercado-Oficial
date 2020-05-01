@@ -77,6 +77,10 @@ namespace Prod_Provee_Marc_Categ.Formularios
         public static string valor;
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow == null)
+            {
+                return;
+            }
             valor = dataGridView1.CurrentRow.Cells[0].Value.ToString();
         }
 

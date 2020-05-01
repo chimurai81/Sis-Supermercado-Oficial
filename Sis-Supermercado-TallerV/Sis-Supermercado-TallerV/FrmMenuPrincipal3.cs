@@ -12,6 +12,7 @@ using Usuarios.Formularios;
 using Clientes;
 using Sis_Supermercado_TallerV;
 using Prod_Provee_Marc_Categ.Formularios;
+using Prod_Provee_Marc_Categ.Formularios_de_Categoria;
 
 namespace MenuPrincipal
 {
@@ -224,6 +225,13 @@ namespace MenuPrincipal
         private void ptbSideBar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSubMenuCategoria_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmMenuCategorias>();
+            lblTitulodeFormulario.Text = "CATEGORIA";
+            hideSubMenu();//siempre al final de todo
         }
     }
 }

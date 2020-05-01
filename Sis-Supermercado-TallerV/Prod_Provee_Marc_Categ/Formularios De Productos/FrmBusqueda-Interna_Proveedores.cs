@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
 {
-    public partial class FrmBusqueda_Interna_Categoria : Form
+    public partial class FrmBusqueda_Interna_Proveedores : Form
     {
-        public FrmBusqueda_Interna_Categoria()
+        public FrmBusqueda_Interna_Proveedores()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
             string sql;
             MySqlDataAdapter consulta;
             DataSet resultado;
-            sql = "SELECT * FROM db_categoria " + condicion;
+            sql = "SELECT * FROM db_proveedores " + condicion;
 
             try
             {
@@ -37,7 +37,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
                 MessageBox.Show(ex.Message);
             }
         }
-        private void FrmBusqueda_Interna_Categoria_Load(object sender, EventArgs e)
+        private void FrmBusqueda_Interna_Proveedores_Load(object sender, EventArgs e)
         {
             GetAll("");
         }
@@ -47,16 +47,9 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
             this.Close();
         }
 
-        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string operacion;
-            operacion = "WHERE  Descripcion LIKE '%" + txtBuscar.Text + "%' OR Estado LIKE '%" + txtBuscar.Text + "%'";
-            GetAll(operacion);
-        }
-
         private void txtBuscar_Enter(object sender, EventArgs e)
         {
-            if (txtBuscar.Text == "Buscar")
+            if(txtBuscar.Text == "Buscar")
             {
                 txtBuscar.Text = "";
             }
@@ -68,6 +61,13 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
             {
                 txtBuscar.Text = "Buscar";
             }
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string operacion;
+            operacion = "WHERE  RazonSocial LIKE '%" + txtBuscar.Text + "%' OR Ruc LIKE '%" + txtBuscar.Text + "%'";
+            GetAll(operacion);
         }
     }
 }

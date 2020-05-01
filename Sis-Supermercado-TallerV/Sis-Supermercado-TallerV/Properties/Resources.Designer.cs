@@ -63,6 +63,16 @@ namespace Sis_Supermercado_TallerV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1253360 {
+            get {
+                object obj = ResourceManager.GetObject("1253360", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar {
             get {
                 object obj = ResourceManager.GetObject("calendar", resourceCulture);
@@ -76,6 +86,16 @@ namespace Sis_Supermercado_TallerV.Properties {
         internal static System.Drawing.Bitmap cash_register {
             get {
                 object obj = ResourceManager.GetObject("cash-register", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap category {
+            get {
+                object obj = ResourceManager.GetObject("category", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,26 @@ namespace Sis_Supermercado_TallerV.Properties {
         internal static System.Drawing.Bitmap IcoDevolucion1 {
             get {
                 object obj = ResourceManager.GetObject("IcoDevolucion1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_proveedor_png_5 {
+            get {
+                object obj = ResourceManager.GetObject("icono-proveedor-png-5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_proveedor_png_51 {
+            get {
+                object obj = ResourceManager.GetObject("icono-proveedor-png-51", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -436,6 +476,16 @@ namespace Sis_Supermercado_TallerV.Properties {
         internal static System.Drawing.Bitmap minimize__1_ {
             get {
                 object obj = ResourceManager.GetObject("minimize (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap package__1_ {
+            get {
+                object obj = ResourceManager.GetObject("package (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

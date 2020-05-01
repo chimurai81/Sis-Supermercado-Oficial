@@ -24,7 +24,8 @@ namespace Prod_Provee_Marc_Categ.Formularios
             string sql;
             MySqlDataAdapter consulta;
             DataSet resultado;
-            sql = "select  a.CodigoProducto,a.Descripcion, a.Stock, a.PrecioDeCompra, a.PrecioDeVenta, a.FechaDeVencimiento, b.Descripcion as 'Categoria', c.Descripcion as 'Marca', d.Nombre 'Proveedor', a.CodigoDeBarra,  a.ImagenDelProducto from db_productos a join db_categoria b ON a.Id_Categoria=b.id join db_marca c On a.Id_Marca=c.id join db_proveedores d On a.Id_Proveedor=d.id" + condicion;
+            sql = "select  a.CodigoProducto, a.Descripcion, b.Descripcion As 'categoria', c.Descripcion As 'Marca', d.RazonSocial As 'Razon Social', a.Stock, a.StockMinimo, a.FechaDeVencimiento, a.Costo, a.CostoMedio, a.Iva, a.PrecioUnitario, a.PrecioMayorista, a.Tipo from db_productos a join db_categoria b ON a.Id_Categoria = b.id " +
+              "join db_marca c On a.Id_Marca = c.id join db_proveedores d On a.Id_Proveedor = d.id" + condicion;
 
             try
             {
@@ -104,27 +105,16 @@ namespace Prod_Provee_Marc_Categ.Formularios
 
         private void bunifuCustomLabel1_MouseEnter(object sender, EventArgs e)
         {
-            lblMarcas.ForeColor = Color.LightCyan;
-            lblMarcas.Font = new Font("Century Gothic", 16, FontStyle.Regular, GraphicsUnit.Pixel);
+            lblCerrar.ForeColor = Color.LightCyan;
+            lblCerrar.Font = new Font("Century Gothic", 16, FontStyle.Regular, GraphicsUnit.Pixel);
         }
 
         private void bunifuCustomLabel1_MouseLeave(object sender, EventArgs e)
         {
-            lblMarcas.ForeColor = Color.White;
-            lblMarcas.Font = new Font("Century Gothic", 14, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblCerrar.ForeColor = Color.White;
+            lblCerrar.Font = new Font("Century Gothic", 14, FontStyle.Bold, GraphicsUnit.Pixel);
         }
 
-        private void lblcategorias_MouseEnter(object sender, EventArgs e)
-        {
-            lblcategorias.ForeColor = Color.LightCyan;
-            lblcategorias.Font = new Font("Century Gothic", 16, FontStyle.Regular, GraphicsUnit.Pixel);
-        }
-
-        private void lblcategorias_MouseLeave(object sender, EventArgs e)
-        {
-            lblcategorias.ForeColor = Color.White;
-            lblcategorias.Font = new Font("Century Gothic", 14, FontStyle.Bold, GraphicsUnit.Pixel);
-        }
 
         private void txtBuscar_OnValueChanged(object sender, EventArgs e)
         {
@@ -153,7 +143,9 @@ namespace Prod_Provee_Marc_Categ.Formularios
             frm.ShowDialog();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+
+
+        private void lblCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
