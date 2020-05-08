@@ -13,6 +13,7 @@ using Sis_Supermercado_TallerV.RegistroUsers;
 using MySql.Data.MySqlClient;
 using Sis_Supermercado_TallerV.Login;
 using MensajesPersonalizados;
+using Prod_Provee_Marc_Categ.Formularios_De_Productos;
 
 namespace Sis_Supermercado_TallerV
 {
@@ -145,9 +146,9 @@ namespace Sis_Supermercado_TallerV
                         {
 
                             FrmMenuPrincipal3 menu = new FrmMenuPrincipal3(txtusuario.Text.ToUpperInvariant());
+                            
                             menu.Show();
                             menu.btnUsuarios.Enabled = false;
-                            
                             this.Hide();
                         }
                         else if (TipoDeAcceso == "CAJERO")

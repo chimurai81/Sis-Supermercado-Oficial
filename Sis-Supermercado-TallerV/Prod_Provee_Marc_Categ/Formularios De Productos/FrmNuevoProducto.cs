@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,7 +46,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
         private void dtpFechaNac_MouseHover(object sender, EventArgs e)
         {
            
-            toolTip1.SetToolTip(dtpFechaNac, "Fecha de Vencimiento");
+            toolTip1.SetToolTip(dtpFechaVencimiento, "Fecha de Vencimiento");
         }
 
         private void dtpFechaNac_Click(object sender, EventArgs e)
@@ -65,8 +66,9 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
 
         private void btnElegirCategoria_Click(object sender, EventArgs e)
         {
-            FrmBusqueda_Interna_Categoria show = new FrmBusqueda_Interna_Categoria();
-            show.ShowDialog();
+            FrmBusqueda_Interna_Categoria frm10 = new FrmBusqueda_Interna_Categoria();
+            AddOwnedForm(frm10);
+            frm10.ShowDialog();
         }
 
         private void btnSeleccionarImagen_Click(object sender, EventArgs e)
@@ -148,37 +150,22 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
 
         private void bunifuMaterialTextbox9_Enter(object sender, EventArgs e)
         {
-            if (bunifuMaterialTextbox9.Text == "Codigo De Barra")
+            if (txtCodigoDeBarra.Text == "Codigo De Barra")
             {
-                bunifuMaterialTextbox9.Text = "";
+                txtCodigoDeBarra.Text = "";
             }
             
         }
 
         private void bunifuMaterialTextbox9_Leave(object sender, EventArgs e)
         {
-            if (bunifuMaterialTextbox9.Text == "")
+            if (txtCodigoDeBarra.Text == "")
             {
-                bunifuMaterialTextbox9.Text = "Codigo De Barra";
+                txtCodigoDeBarra.Text = "Codigo De Barra";
             }
         }
 
-        private void bunifuMaterialTextbox1_Enter(object sender, EventArgs e)
-        {
-            if (bunifuMaterialTextbox1.Text == "Stock")
-            {
-                bunifuMaterialTextbox1.Text = "";
-            }
-        }
-
-        private void bunifuMaterialTextbox1_Leave(object sender, EventArgs e)
-        {
-            if (bunifuMaterialTextbox1.Text == "")
-            {
-                bunifuMaterialTextbox1.Text = "Stock";
-            }
-        }
-
+      
         private void txtCosto_Enter(object sender, EventArgs e)
         {
             if (txtCosto.Text == "Costo")
@@ -244,48 +231,74 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
             }
         }
 
-        private void txtIva_Enter(object sender, EventArgs e)
-        {
-            if (txtIva.Text == "IVA")
-            {
-                txtIva.Text = "";
-            }
-        }
-
-        private void txtIva_Leave(object sender, EventArgs e)
-        {
-            if (txtIva.Text == "")
-            {
-                txtIva.Text = "IVA";
-            }
-        }
-
-        private void txtTipo_Enter(object sender, EventArgs e)
-        {
-            if (txtTipo.Text == "Tipo")
-            {
-                txtTipo.Text = "";
-            }
-        }
-
-        private void txtTipo_Leave(object sender, EventArgs e)
-        {
-            if (txtTipo.Text == "")
-            {
-                txtTipo.Text = "Tipo";
-            }
-        }
 
         private void btnElegirMarca_Click(object sender, EventArgs e)
         {
-            FrmBusqueda_Interna_Marca frm = new FrmBusqueda_Interna_Marca();
-            frm.ShowDialog();
+            FrmBusqueda_Interna_Marca frmHijo = new FrmBusqueda_Interna_Marca(); //instanciar un objeto del formulario hijo
+            AddOwnedForm(frmHijo);
+            frmHijo.ShowDialog();
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)
         {
-            FrmBusqueda_Interna_Proveedores frm = new FrmBusqueda_Interna_Proveedores();
-            frm.ShowDialog();
+            FrmBusqueda_Interna_Proveedores frmHijo = new FrmBusqueda_Interna_Proveedores(); //instanciar un objeto del formulario hijo
+            AddOwnedForm(frmHijo); //pasar las propiedades del formulario hijo al formulario padre.
+            frmHijo.ShowDialog();
+        }
+
+        //ESTE MODULO SIRVE PARA PODER CONVERTIR LAS IMAGENES EN BYTES.
+        public static byte[] Image2Bytes(Image Img)
+        {
+            if (Img == null)
+            {
+                return null;
+            }
+            else
+            {
+                ImageConverter converter = new ImageConverter();
+                return (byte[])converter.ConvertTo(Img, typeof(byte[]));
+            }
+        }
+
+        //INGRESAR NUEVO PRODUCTO CON LA ENTIDAD DEL PROVEEDOR, MARCA, CATEGORI
+        public void InsertarProducto()
+        {
+            string sql;
+            //MySqlCommand comando;
+            sql = "insert into db_productos (Descripcion, Costo, PrecioUnitario, FechaDeVencimiento, ImagenDelProducto, CodigoDeBarra, Id_Proveedor, Id_Marca, Id_Categoria, CodigoProducto, Tipo, Iva, PrecioMayorista, CostoMedio) values (@Descripcion, @Costo, @PrecioUnitario, @FechaDeVencimiento, @ImagenDelProducto, @CodigoDeBarra, @Id_Proveedor, @Id_Marca, @Id_Categoria, @CodigoProducto, @Tipo, @Iva, @PrecioMayorista, @CostoMedio)";
+            MySqlCommand comando;
+            try
+            {
+                modulo.AbrirConexion();
+                comando = new MySqlCommand(sql, modulo.conexion);
+                comando.Parameters.AddWithValue("@Descripcion", txtDescripcion.Text.ToUpperInvariant().ToString());
+                comando.Parameters.AddWithValue("@Costo", Convert.ToDecimal(txtCosto.Text));
+                comando.Parameters.AddWithValue("@PrecioUnitario", Convert.ToDecimal(txtPrecioUnitario.Text));
+                comando.Parameters.AddWithValue("@FechaDeVencimiento", dtpFechaVencimiento.Value);
+                comando.Parameters.AddWithValue("@ImagenDelProducto", Image2Bytes(ptbImagenProducto.Image));
+                comando.Parameters.AddWithValue("@CodigoDeBarra", Convert.ToDecimal(txtCodigoDeBarra.Text));
+                comando.Parameters.AddWithValue("@Id_Proveedor", int.Parse(txtProveedor.Text));
+                comando.Parameters.AddWithValue("@Id_Marca", int.Parse(txtMarca.Text));
+                comando.Parameters.AddWithValue("@Id_Categoria", int.Parse(txtCategoria.Text));
+                comando.Parameters.AddWithValue("@CodigoProducto", txtCodigoProducto.Text.ToString());
+                comando.Parameters.AddWithValue("@Tipo", (cbxTipo.selectedValue.ToString()));
+                comando.Parameters.AddWithValue("@Iva", (cbxIva.selectedValue.ToString()));
+                comando.Parameters.AddWithValue("@PrecioMayorista", Convert.ToDecimal(txtPrecioMayorista.Text));
+                comando.Parameters.AddWithValue("@CostoMedio", Convert.ToDecimal(txtCostoMedio.Text));
+
+                comando.ExecuteNonQuery();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+           
+            InsertarProducto();
         }
     }
 }

@@ -32,13 +32,13 @@ namespace Prod_Provee_Marc_Categ.Formularios
         {
             string sql;
             //MySqlCommand comando;
-            sql = "insert into db_proveedores (Nombre, NroTelef, Ruc, Direccion) values (@Nombre, @NroTelef, @Ruc, @Direccion)";
+            sql = "insert into db_proveedores (RazonSocial, NroTelef, Ruc, Direccion) values (@RazonSocial, @NroTelef, @Ruc, @Direccion)";
             MySqlCommand comando;
             try
             {
                 modulo.AbrirConexion();
                 comando = new MySqlCommand(sql, modulo.conexion);
-                comando.Parameters.AddWithValue("@Nombre", txtNombreProveedor.Text.ToUpperInvariant().ToString());
+                comando.Parameters.AddWithValue("@RazonSocial", txtNombreProveedor.Text.ToUpperInvariant().ToString());
                 comando.Parameters.AddWithValue("@NroTelef", txtRuc.Text.ToString());
                 comando.Parameters.AddWithValue("@Ruc", txtNroTelef.Text.ToString());
                 comando.Parameters.AddWithValue("@Direccion", txtDireccion.Text.ToUpperInvariant().ToString());

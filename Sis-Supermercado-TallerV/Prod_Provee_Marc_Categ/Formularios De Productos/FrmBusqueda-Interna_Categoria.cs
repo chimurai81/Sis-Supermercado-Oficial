@@ -13,6 +13,8 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
 {
     public partial class FrmBusqueda_Interna_Categoria : Form
     {
+        private object frm;
+
         public FrmBusqueda_Interna_Categoria()
         {
             InitializeComponent();
@@ -68,6 +70,13 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
             {
                 txtBuscar.Text = "Buscar";
             }
+        }
+
+        private void DataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FrmNuevoProductos frm3 = (FrmNuevoProductos)Owner;
+            frm3.txtCategoria.Text = Convert.ToString(DataGridView1.CurrentRow.Cells[0].Value);
+            this.Close();
         }
     }
 }

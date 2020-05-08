@@ -31,16 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNuevoProductos));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.dtpFechaNac = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.dtpFechaVencimiento = new Bunifu.Framework.UI.BunifuDatepicker();
             this.txtCodigoProducto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtIva = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPrecioUnitario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPrecioMayorista = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCategoria = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtMarca = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtProveedor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox9 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtCodigoDeBarra = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.ptbImagenProducto = new System.Windows.Forms.PictureBox();
             this.btnElegirImagenProducto = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnElegirCategoria = new Bunifu.Framework.UI.BunifuImageButton();
@@ -53,13 +52,13 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCosto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCostoMedio = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtTipo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.cbxIva = new Bunifu.Framework.UI.BunifuDropdown();
+            this.cbxTipo = new Bunifu.Framework.UI.BunifuDropdown();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnElegirCategoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -75,23 +74,23 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // dtpFechaNac
+            // dtpFechaVencimiento
             // 
-            this.dtpFechaNac.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dtpFechaNac.BackgroundImage = global::Prod_Provee_Marc_Categ.Properties.Resources.a68832c79725180370fa5e147b19b8c5;
-            this.dtpFechaNac.BorderRadius = 0;
-            this.dtpFechaNac.ForeColor = System.Drawing.Color.Black;
-            this.dtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNac.FormatCustom = "Fecha De Vencimiento";
-            this.dtpFechaNac.Location = new System.Drawing.Point(13, 539);
-            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(511, 55);
-            this.dtpFechaNac.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.dtpFechaNac, "Fecha De Vencimiento");
-            this.toolTip2.SetToolTip(this.dtpFechaNac, "Fecha De Vencimiento");
-            this.dtpFechaNac.Value = new System.DateTime(2020, 4, 16, 19, 6, 52, 585);
-            this.dtpFechaNac.Click += new System.EventHandler(this.dtpFechaNac_Click);
+            this.dtpFechaVencimiento.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dtpFechaVencimiento.BackgroundImage = global::Prod_Provee_Marc_Categ.Properties.Resources.a68832c79725180370fa5e147b19b8c5;
+            this.dtpFechaVencimiento.BorderRadius = 0;
+            this.dtpFechaVencimiento.ForeColor = System.Drawing.Color.Black;
+            this.dtpFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaVencimiento.FormatCustom = "Fecha De Vencimiento";
+            this.dtpFechaVencimiento.Location = new System.Drawing.Point(13, 479);
+            this.dtpFechaVencimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
+            this.dtpFechaVencimiento.Size = new System.Drawing.Size(511, 55);
+            this.dtpFechaVencimiento.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.dtpFechaVencimiento, "Fecha De Vencimiento");
+            this.toolTip2.SetToolTip(this.dtpFechaVencimiento, "Fecha De Vencimiento");
+            this.dtpFechaVencimiento.Value = new System.DateTime(2020, 4, 16, 19, 6, 52, 585);
+            this.dtpFechaVencimiento.Click += new System.EventHandler(this.dtpFechaNac_Click);
             // 
             // txtCodigoProducto
             // 
@@ -139,29 +138,6 @@
             this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDescripcion.Enter += new System.EventHandler(this.txtDescripcion_Enter);
             this.txtDescripcion.Leave += new System.EventHandler(this.txtDescripcion_Leave);
-            // 
-            // txtIva
-            // 
-            this.txtIva.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtIva.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIva.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtIva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIva.HintForeColor = System.Drawing.Color.Empty;
-            this.txtIva.HintText = "";
-            this.txtIva.isPassword = false;
-            this.txtIva.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtIva.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtIva.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtIva.LineThickness = 3;
-            this.txtIva.Location = new System.Drawing.Point(617, 559);
-            this.txtIva.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(511, 55);
-            this.txtIva.TabIndex = 14;
-            this.txtIva.Text = "IVA";
-            this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtIva.Enter += new System.EventHandler(this.txtIva_Enter);
-            this.txtIva.Leave += new System.EventHandler(this.txtIva_Leave);
             // 
             // txtPrecioUnitario
             // 
@@ -278,28 +254,28 @@
             this.txtProveedor.Text = "Proveedor";
             this.txtProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox9
+            // txtCodigoDeBarra
             // 
-            this.bunifuMaterialTextbox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bunifuMaterialTextbox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox9.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox9.HintText = "";
-            this.bunifuMaterialTextbox9.isPassword = false;
-            this.bunifuMaterialTextbox9.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox9.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox9.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox9.LineThickness = 3;
-            this.bunifuMaterialTextbox9.Location = new System.Drawing.Point(13, 420);
-            this.bunifuMaterialTextbox9.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox9.Name = "bunifuMaterialTextbox9";
-            this.bunifuMaterialTextbox9.Size = new System.Drawing.Size(511, 55);
-            this.bunifuMaterialTextbox9.TabIndex = 5;
-            this.bunifuMaterialTextbox9.Text = "Codigo De Barra";
-            this.bunifuMaterialTextbox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMaterialTextbox9.Enter += new System.EventHandler(this.bunifuMaterialTextbox9_Enter);
-            this.bunifuMaterialTextbox9.Leave += new System.EventHandler(this.bunifuMaterialTextbox9_Leave);
+            this.txtCodigoDeBarra.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtCodigoDeBarra.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCodigoDeBarra.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCodigoDeBarra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCodigoDeBarra.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCodigoDeBarra.HintText = "";
+            this.txtCodigoDeBarra.isPassword = false;
+            this.txtCodigoDeBarra.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtCodigoDeBarra.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCodigoDeBarra.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtCodigoDeBarra.LineThickness = 3;
+            this.txtCodigoDeBarra.Location = new System.Drawing.Point(13, 420);
+            this.txtCodigoDeBarra.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoDeBarra.Name = "txtCodigoDeBarra";
+            this.txtCodigoDeBarra.Size = new System.Drawing.Size(511, 55);
+            this.txtCodigoDeBarra.TabIndex = 5;
+            this.txtCodigoDeBarra.Text = "Codigo De Barra";
+            this.txtCodigoDeBarra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCodigoDeBarra.Enter += new System.EventHandler(this.bunifuMaterialTextbox9_Enter);
+            this.txtCodigoDeBarra.Leave += new System.EventHandler(this.bunifuMaterialTextbox9_Leave);
             // 
             // ptbImagenProducto
             // 
@@ -421,6 +397,7 @@
             this.bunifuImageButton2.TabStop = false;
             this.toolTip2.SetToolTip(this.bunifuImageButton2, "Guardar");
             this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // bunifuImageButton3
             // 
@@ -448,35 +425,12 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(251, 556);
+            this.label1.Location = new System.Drawing.Point(251, 496);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 21);
             this.label1.TabIndex = 37;
             this.label1.Text = "Fecha De Vencimiento";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
-            // 
-            // bunifuMaterialTextbox1
-            // 
-            this.bunifuMaterialTextbox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(13, 480);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(511, 55);
-            this.bunifuMaterialTextbox1.TabIndex = 6;
-            this.bunifuMaterialTextbox1.Text = "Stock";
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMaterialTextbox1.Enter += new System.EventHandler(this.bunifuMaterialTextbox1_Enter);
-            this.bunifuMaterialTextbox1.Leave += new System.EventHandler(this.bunifuMaterialTextbox1_Leave);
             // 
             // txtCosto
             // 
@@ -491,7 +445,7 @@
             this.txtCosto.LineIdleColor = System.Drawing.Color.Gray;
             this.txtCosto.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtCosto.LineThickness = 3;
-            this.txtCosto.Location = new System.Drawing.Point(13, 599);
+            this.txtCosto.Location = new System.Drawing.Point(13, 539);
             this.txtCosto.Margin = new System.Windows.Forms.Padding(4);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(511, 55);
@@ -514,7 +468,7 @@
             this.txtCostoMedio.LineIdleColor = System.Drawing.Color.Gray;
             this.txtCostoMedio.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtCostoMedio.LineThickness = 3;
-            this.txtCostoMedio.Location = new System.Drawing.Point(13, 659);
+            this.txtCostoMedio.Location = new System.Drawing.Point(13, 599);
             this.txtCostoMedio.Margin = new System.Windows.Forms.Padding(4);
             this.txtCostoMedio.Name = "txtCostoMedio";
             this.txtCostoMedio.Size = new System.Drawing.Size(511, 55);
@@ -523,29 +477,6 @@
             this.txtCostoMedio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCostoMedio.Enter += new System.EventHandler(this.txtCostoMedio_Enter);
             this.txtCostoMedio.Leave += new System.EventHandler(this.txtCostoMedio_Leave);
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTipo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTipo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTipo.HintForeColor = System.Drawing.Color.Empty;
-            this.txtTipo.HintText = "";
-            this.txtTipo.isPassword = false;
-            this.txtTipo.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtTipo.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtTipo.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtTipo.LineThickness = 3;
-            this.txtTipo.Location = new System.Drawing.Point(617, 617);
-            this.txtTipo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(511, 55);
-            this.txtTipo.TabIndex = 15;
-            this.txtTipo.Text = "Tipo";
-            this.txtTipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtTipo.Enter += new System.EventHandler(this.txtTipo_Enter);
-            this.txtTipo.Leave += new System.EventHandler(this.txtTipo_Leave);
             // 
             // bunifuTileButton1
             // 
@@ -592,6 +523,43 @@
             this.bunifuTileButton2.TabIndex = 11;
             this.bunifuTileButton2.Click += new System.EventHandler(this.bunifuTileButton2_Click);
             // 
+            // cbxIva
+            // 
+            this.cbxIva.BackColor = System.Drawing.Color.Transparent;
+            this.cbxIva.BorderRadius = 3;
+            this.cbxIva.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbxIva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(74)))), ((int)(((byte)(127)))));
+            this.cbxIva.Items = new string[] {
+        "0",
+        "5",
+        "10"};
+            this.cbxIva.Location = new System.Drawing.Point(617, 560);
+            this.cbxIva.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cbxIva.Name = "cbxIva";
+            this.cbxIva.NomalColor = System.Drawing.Color.White;
+            this.cbxIva.onHoverColor = System.Drawing.Color.White;
+            this.cbxIva.selectedIndex = -1;
+            this.cbxIva.Size = new System.Drawing.Size(511, 55);
+            this.cbxIva.TabIndex = 38;
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.BackColor = System.Drawing.Color.Transparent;
+            this.cbxTipo.BorderRadius = 3;
+            this.cbxTipo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbxTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(74)))), ((int)(((byte)(127)))));
+            this.cbxTipo.Items = new string[] {
+        "Producto",
+        "Delivery"};
+            this.cbxTipo.Location = new System.Drawing.Point(617, 624);
+            this.cbxTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.NomalColor = System.Drawing.Color.White;
+            this.cbxTipo.onHoverColor = System.Drawing.Color.White;
+            this.cbxTipo.selectedIndex = -1;
+            this.cbxTipo.Size = new System.Drawing.Size(511, 55);
+            this.cbxTipo.TabIndex = 39;
+            // 
             // FrmNuevoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -599,12 +567,12 @@
             this.BackgroundImage = global::Prod_Provee_Marc_Categ.Properties.Resources.FondoAggProducto3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1174, 812);
+            this.Controls.Add(this.cbxTipo);
+            this.Controls.Add(this.cbxIva);
             this.Controls.Add(this.bunifuTileButton2);
             this.Controls.Add(this.bunifuTileButton1);
-            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtCostoMedio);
             this.Controls.Add(this.txtCosto);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuImageButton3);
             this.Controls.Add(this.bunifuImageButton2);
@@ -614,17 +582,16 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnElegirCategoria);
             this.Controls.Add(this.btnElegirImagenProducto);
-            this.Controls.Add(this.bunifuMaterialTextbox9);
+            this.Controls.Add(this.txtCodigoDeBarra);
             this.Controls.Add(this.txtProveedor);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.txtPrecioMayorista);
             this.Controls.Add(this.txtPrecioUnitario);
-            this.Controls.Add(this.txtIva);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtCodigoProducto);
             this.Controls.Add(this.ptbImagenProducto);
-            this.Controls.Add(this.dtpFechaNac);
+            this.Controls.Add(this.dtpFechaVencimiento);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
@@ -651,14 +618,10 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCodigoProducto;
-        private Bunifu.Framework.UI.BunifuDatepicker dtpFechaNac;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox9;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtProveedor;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMarca;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCategoria;
+        private Bunifu.Framework.UI.BunifuDatepicker dtpFechaVencimiento;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCodigoDeBarra;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrecioMayorista;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrecioUnitario;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtIva;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtDescripcion;
         private System.Windows.Forms.PictureBox ptbImagenProducto;
         private Bunifu.Framework.UI.BunifuThinButton2 btnElegirImagenProducto;
@@ -667,17 +630,20 @@
         private Bunifu.Framework.UI.BunifuImageButton btnElegirMarca;
         private Bunifu.Framework.UI.BunifuImageButton btnProveedor;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCostoMedio;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCosto;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtTipo;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton2;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtCategoria;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtMarca;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtProveedor;
+        private Bunifu.Framework.UI.BunifuDropdown cbxIva;
+        private Bunifu.Framework.UI.BunifuDropdown cbxTipo;
+        public Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
     }
 }

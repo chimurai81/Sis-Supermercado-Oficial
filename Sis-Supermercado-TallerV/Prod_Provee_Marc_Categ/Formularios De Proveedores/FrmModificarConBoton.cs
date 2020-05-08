@@ -28,14 +28,14 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Proveedores
         {
             string sql;
             //MySqlCommand comando;
-            sql = "update db_proveedores set Nombre=@Nombre, NroTelef=@NroTelef, Ruc=@Ruc, Direccion=@Direccion where id=@id";
+            sql = "update db_proveedores set RazonSocial=@RazonSocial, NroTelef=@NroTelef, Ruc=@Ruc, Direccion=@Direccion where id=@id";
             MySqlCommand comando;
             try
             {
                 modulo.AbrirConexion();
                 comando = new MySqlCommand(sql, modulo.conexion);
 
-                comando.Parameters.AddWithValue("@Nombre", txtNombreProveedor.Text.ToUpperInvariant().ToString());
+                comando.Parameters.AddWithValue("@RazonSocial", txtNombreProveedor.Text.ToUpperInvariant().ToString());
                 comando.Parameters.AddWithValue("@NroTelef", txtNroTelef.Text.ToUpperInvariant().ToString());
                 comando.Parameters.AddWithValue("@Ruc", txtRuc.Text.ToString());
                 comando.Parameters.AddWithValue("@Direccion", txtDireccion.Text.ToString());
@@ -65,7 +65,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Proveedores
                 n = resultado.Tables["rsProveedor"].Rows.Count;
 
                 txtId.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["id"]);
-                txtNombreProveedor.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Nombre"]);
+                txtNombreProveedor.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["RazonSocial"]);
                 txtRuc.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["NroTelef"]);
                 txtNroTelef.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Ruc"]);
                 txtDireccion.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Direccion"]);

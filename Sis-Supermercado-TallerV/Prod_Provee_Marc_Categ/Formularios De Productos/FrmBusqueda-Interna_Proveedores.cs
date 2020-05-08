@@ -69,5 +69,12 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
             operacion = "WHERE  RazonSocial LIKE '%" + txtBuscar.Text + "%' OR Ruc LIKE '%" + txtBuscar.Text + "%'";
             GetAll(operacion);
         }
+
+        private void DataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FrmNuevoProductos FrmPadre = (FrmNuevoProductos)Owner;
+            FrmPadre.txtProveedor.Text = Convert.ToString(DataGridView1.CurrentRow.Cells[0].Value);
+            this.Close();
+        }
     }
 }

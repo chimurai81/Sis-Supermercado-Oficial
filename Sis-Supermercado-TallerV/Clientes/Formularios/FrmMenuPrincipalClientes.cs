@@ -53,7 +53,7 @@ namespace Clientes
         {
 
             GetAll("");
-            comboBox1.SelectedIndex = 0;
+
         }
 
         //INSERTAR NUEVO CLIENTE
@@ -124,40 +124,39 @@ namespace Clientes
 
         private void bunifuMaterialTextbox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string condicion;
-            condicion = "";
-
-            if (comboBox1.SelectedItem.ToString() == "NOMBRE")
+            try
             {
-                condicion = " where Nombre like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
+                string operacion;
+                operacion = "WHERE Nombre LIKE '%" + txtBuscar.Text + "%' OR Apellido LIKE '%" + txtBuscar.Text + "%' OR Ruc like '%" + txtBuscar.Text + "%'";
+                GetAll(operacion);
             }
-
-            if (comboBox1.SelectedItem.ToString() == "APELLIDO")
+            catch (MySqlException ex)
             {
-                condicion = " where Apellido like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
-            }
 
-            if (comboBox1.SelectedItem.ToString() == "CEDULA")
-            {
-                condicion = " where CiNro like '%" + txtBuscar.Text + "%'";
+                MessageBox.Show(ex.StackTrace);
             }
- 
-            if (comboBox1.SelectedItem.ToString() == "RUC")
-            {
-                condicion = " where Ruc like '%" + txtBuscar.Text + "%'";
-            }
-
-            if (comboBox1.SelectedItem.ToString() == "TELEFONO")
-            {
-                condicion = " where NroTelef like '%" + txtBuscar.Text + "%'";
-            }
-
-            GetAll(condicion);
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            if(txtBuscar.Text == "Buscar")
+            {
+                txtBuscar.Text = "";
+            }
+        }
+
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+                txtBuscar.Text = "Buscar";
+            }
         }
     }
 }

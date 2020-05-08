@@ -69,5 +69,12 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
                 txtBuscar.Text = "Buscar";
             }
         }
+
+        private void DataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FrmNuevoProductos FrmPadre = (FrmNuevoProductos)Owner;
+            FrmPadre.txtMarca.Text = Convert.ToString(DataGridView1.CurrentRow.Cells[0].Value);
+            this.Close();
+        }
     }
 }
